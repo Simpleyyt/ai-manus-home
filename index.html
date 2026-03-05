@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Manus | 开源通用 AI Agent</title>
+    <meta
+      name="description"
+      content="AI Manus 是开源通用 AI Agent 系统，支持 Terminal、Browser、File、Web Search 与消息工具，可在沙箱环境中执行复杂任务。"
+    />
+    <meta property="og:title" content="AI Manus | 开源通用 AI Agent" />
+    <meta
+      property="og:description"
+      content="部署门槛低、工具链完整、可实时接管的开源 AI Agent。"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/Simpleyyt/ai-manus/main/frontend/public/chatting.svg"
+    />
+    <link rel="preconnect" href="https://github.com" />
+    <link rel="preconnect" href="https://raw.githubusercontent.com" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="siteHeader">
+      <div class="container nav">
+        <a class="brand" href="#top">AI Manus</a>
+        <nav>
+          <a href="#demos">演示</a>
+          <a href="#features">能力</a>
+          <a href="#architecture">架构</a>
+          <a href="#start">开始使用</a>
+        </nav>
+        <a
+          class="btn btn-small btn-outline"
+          href="https://github.com/Simpleyyt/ai-manus"
+          target="_blank"
+          rel="noreferrer"
+          >GitHub</a
+        >
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="https://raw.githubusercontent.com/Simpleyyt/ai-manus/main/frontend/public/chatting.svg"
+        >
+          <source
+            src="https://github.com/user-attachments/assets/37060a09-c647-4bcb-920c-959f7fa73ebe"
+            type="video/mp4"
+          />
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content reveal">
+          <p class="badge">Open Source · General Purpose AI Agent</p>
+          <h1>AI Manus：让智能体在你的环境里真正“动起来”</h1>
+          <p class="hero-desc">
+            具备 Browser、Terminal、File、Web Search 与消息能力，支持沙箱隔离执行、实时查看与接管，适用于研究、开发、自动化流程等多种场景。
+          </p>
+          <div class="hero-actions">
+            <a
+              class="btn btn-primary"
+              href="https://github.com/Simpleyyt/ai-manus"
+              target="_blank"
+              rel="noreferrer"
+              >查看 GitHub 项目</a
+            >
+            <a
+              class="btn btn-ghost"
+              href="https://app.ai-manus.com/"
+              target="_blank"
+              rel="noreferrer"
+              >打开在线 Demo</a
+            >
+          </div>
+          <div class="stats">
+            <div>
+              <p class="stat-label">GitHub Stars</p>
+              <p class="stat-value" id="starCount">--</p>
+            </div>
+            <div>
+              <p class="stat-label">模型兼容</p>
+              <p class="stat-value">OpenAI / DeepSeek</p>
+            </div>
+            <div>
+              <p class="stat-label">部署方式</p>
+              <p class="stat-value">Docker Compose</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container" id="demos">
+        <div class="section-head reveal">
+          <p class="section-kicker">Demo</p>
+          <h2>从研究到执行，完整工作流一目了然</h2>
+        </div>
+        <div class="demo-grid">
+          <article class="card reveal">
+            <h3>基础能力演示</h3>
+            <p>完整展示 AI Manus 从接收任务到调用工具执行的过程。</p>
+            <video controls preload="metadata" playsinline>
+              <source
+                src="https://github.com/user-attachments/assets/37060a09-c647-4bcb-920c-959f7fa73ebe"
+                type="video/mp4"
+              />
+            </video>
+          </article>
+          <article class="card reveal">
+            <h3>Browser Use</h3>
+            <p>自动检索与浏览网页信息，完成结构化研究任务。</p>
+            <video controls preload="metadata" playsinline>
+              <source
+                src="https://github.com/user-attachments/assets/4e35bc4d-024a-4617-8def-a537a94bd285"
+                type="video/mp4"
+              />
+            </video>
+          </article>
+          <article class="card reveal">
+            <h3>Code Use</h3>
+            <p>调用终端与文件工具，直接编写并迭代复杂代码任务。</p>
+            <video controls preload="metadata" playsinline>
+              <source
+                src="https://github.com/user-attachments/assets/765ea387-bb1c-4dc2-b03e-716698feef77"
+                type="video/mp4"
+              />
+            </video>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="features">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="section-kicker">Capabilities</p>
+            <h2>关键能力覆盖真实生产环境</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature reveal">
+              <h3>最小依赖部署</h3>
+              <p>仅依赖 LLM 服务即可运行，无需复杂外部服务堆栈。</p>
+            </article>
+            <article class="feature reveal">
+              <h3>完整工具系统</h3>
+              <p>内置 Terminal、Browser、File、Web Search、消息工具并支持 MCP 扩展。</p>
+            </article>
+            <article class="feature reveal">
+              <h3>任务级沙箱隔离</h3>
+              <p>每个任务独立容器环境，浏览器与命令执行互不干扰，安全可控。</p>
+            </article>
+            <article class="feature reveal">
+              <h3>会话与后台任务</h3>
+              <p>会话历史可持久化管理，支持任务中断、恢复与后台执行。</p>
+            </article>
+            <article class="feature reveal">
+              <h3>实时查看与接管</h3>
+              <p>可实时观察 Agent 执行过程，并在关键节点手动接管操作。</p>
+            </article>
+            <article class="feature reveal">
+              <h3>多语言与认证</h3>
+              <p>支持中英文界面，并提供用户登录与认证机制。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container" id="architecture">
+        <div class="section-head reveal">
+          <p class="section-kicker">Architecture</p>
+          <h2>清晰的 Agent + Sandbox 架构设计</h2>
+          <p>
+            前端通过会话与服务端通信，服务端分配沙箱并驱动 PlanAct
+            Agent，通过事件流将执行状态实时回传前端。
+          </p>
+        </div>
+        <div class="architecture-card reveal">
+          <img
+            src="https://github.com/user-attachments/assets/69775011-1eb7-452f-adaf-cd6603a4dde5"
+            alt="AI Manus Overall Design"
+          />
+        </div>
+      </section>
+
+      <section class="section section-alt" id="start">
+        <div class="container start-box reveal">
+          <div>
+            <p class="section-kicker">Quick Start</p>
+            <h2>几分钟启动你的 AI Manus</h2>
+            <p>推荐使用 Docker Compose 部署，拉起前后端及沙箱镜像即可运行。</p>
+            <div class="hero-actions">
+              <a
+                class="btn btn-primary"
+                href="https://github.com/Simpleyyt/ai-manus"
+                target="_blank"
+                rel="noreferrer"
+                >阅读部署文档</a
+              >
+              <a
+                class="btn btn-ghost dark"
+                href="https://app.ai-manus.com/"
+                target="_blank"
+                rel="noreferrer"
+                >先试用 Demo</a
+              >
+            </div>
+          </div>
+          <pre><code>git clone https://github.com/simpleyyt/ai-manus.git
+cd ai-manus
+cp .env.example .env
+docker compose up -d</code></pre>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> AI Manus Home</p>
+        <div class="footer-links">
+          <a href="https://github.com/Simpleyyt/ai-manus" target="_blank" rel="noreferrer"
+            >GitHub</a
+          >
+          <a href="https://app.ai-manus.com/" target="_blank" rel="noreferrer">Demo</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
