@@ -1,0 +1,1263 @@
+<html lang="zh-CN" id="html-root">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <!-- Primary SEO -->
+  <title>AI Manus | 通用的 AI Agent 系统</title>
+  <meta name="description" content="AI Manus 是一款通用的 AI Agent 系统，支持在沙盒环境中运行 Terminal、Browser、File、Web Search 等工具，支持 MCP 集成，兼容 OpenAI 接口，一键 Docker 部署。">
+  <meta name="keywords" content="AI Agent, AI Manus, 人工智能, 沙盒, Docker, MCP, OpenAI, Deepseek, Browser Use, 自动化, 智能体">
+  <link rel="canonical" href="https://ai-manus.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ai-manus.com/">
+  <meta property="og:title" content="AI Manus | 通用的 AI Agent 系统">
+  <meta property="og:description" content="AI Manus 是一款通用的 AI Agent 系统，支持在沙盒环境中运行 Terminal、Browser、File、Web Search 等工具，支持 MCP 集成，一键 Docker 部署，享受你的专属智能体。">
+  <meta property="og:image" content="https://ai-manus.com/og-image.png">
+  <meta property="og:site_name" content="AI Manus">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Manus | 通用的 AI Agent 系统">
+  <meta name="twitter:description" content="AI Manus 是一款通用的 AI Agent 系统，支持在沙盒环境中运行 Terminal、Browser、File、Web Search 等工具，支持 MCP 集成，一键 Docker 部署。">
+  <meta name="twitter:image" content="https://ai-manus.com/og-image.png">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style type="text/css" data-framer-css="true"></style>
+  <style>
+    .ai-manus-copy-btn {
+      opacity: 0;
+      transition: opacity 0.15s, background 0.15s;
+    }
+    .framer-XhfDh:hover .ai-manus-copy-btn {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main"
+    data-framer-hydrate-v2="{&quot;routeId&quot;:&quot;Snma58JJ6&quot;,&quot;localeId&quot;:&quot;S4Y91TmDI&quot;,&quot;breakpoints&quot;:[{&quot;hash&quot;:&quot;1byk7v4&quot;,&quot;mediaQuery&quot;:&quot;(min-width: 1200px)&quot;},{&quot;hash&quot;:&quot;cwhi80&quot;,&quot;mediaQuery&quot;:&quot;(min-width: 810px) and (max-width: 1199.98px)&quot;},{&quot;hash&quot;:&quot;oi7z0n&quot;,&quot;mediaQuery&quot;:&quot;(max-width: 809.98px)&quot;},{&quot;hash&quot;:&quot;goucub&quot;,&quot;mediaQuery&quot;:&quot;(min-width: 1200px)&quot;},{&quot;hash&quot;:&quot;itf1qy&quot;,&quot;mediaQuery&quot;:&quot;(min-width: 810px) and (max-width: 1199.98px)&quot;},{&quot;hash&quot;:&quot;i71a3q&quot;,&quot;mediaQuery&quot;:&quot;(max-width: 809.98px)&quot;}]}"
+    data-framer-ssr-released-at="2026-03-05T13:25:51.047Z" data-framer-page-optimized-at="2026-03-06T23:50:49.847Z"
+    data-framer-generated-page="">
+    <style data-framer-html-style="">
+      :root body {
+        background: rgb(248, 248, 247);
+      }
+    </style>
+    <div class="framer-c1S22 framer-goucub" data-layout-template="true" style="min-height: 100vh; width: auto;">
+      <div class="framer-1kmhtex-container" data-framer-layout-hint-center-x="true">
+        <nav class="framer-2oZlX framer-SJwLt framer-X39Rs framer-1kispe1 framer-v-1kispe1" data-framer-name="Web"
+          data-hide-scrollbars="true" style="background-color: rgb(248, 248, 247); width: 100%; opacity: 1;">
+          <div class="framer-14tlwdt" style="opacity: 1;">
+            <div class="framer-pxrl8z" style="opacity: 1;">
+              <div class="framer-ql7dj7-container" style="opacity: 1;"><a
+                  class="framer-NDW9W framer-1kuud8q framer-v-1kuud8q framer-6b6s4k" data-framer-name="Black"
+                  href="https://github.com/Simpleyyt/ai-manus" rel="noopener" target="_blank" style="height: 100%; width: 100%; opacity: 1;">
+                  <div style="display: flex;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot-icon lucide-bot"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="88" height="38" viewBox="0 0 88 38" fill="black"><path d="M75.9757 24.9999H75.2937V20.9959H76.2177C76.4677 22.0519 76.8267 22.8219 77.2957 23.3059C77.7657 23.7899 78.3737 24.0319 79.1217 24.0319C79.6647 24.0319 80.0827 23.9219 80.3757 23.7019C80.6837 23.4672 80.8377 23.1519 80.8377 22.7559C80.8377 22.3452 80.6547 21.9492 80.2877 21.5679C79.9217 21.1719 79.3277 20.7539 78.5057 20.3139C77.3917 19.7126 76.5917 19.1186 76.1077 18.5319C75.6237 17.9306 75.3817 17.2559 75.3817 16.5079C75.3817 16.0239 75.4697 15.5766 75.6457 15.1659C75.8367 14.7406 76.0857 14.3739 76.3937 14.0659C76.7167 13.7579 77.0977 13.5232 77.5377 13.3619C77.9777 13.1859 78.4547 13.0979 78.9677 13.0979C79.4227 13.0979 79.8697 13.1639 80.3097 13.2959C80.7647 13.4279 81.1607 13.6112 81.4977 13.8459L81.8937 13.3179H82.4657V16.6399H81.6077C81.2707 15.8039 80.9187 15.2026 80.5517 14.8359C80.1997 14.4692 79.7677 14.2859 79.2537 14.2859C78.8437 14.2859 78.5137 14.3959 78.2637 14.6159C78.0297 14.8359 77.9117 15.1292 77.9117 15.4959C77.9117 15.9066 78.0877 16.2952 78.4397 16.6619C78.8067 17.0286 79.4077 17.4319 80.2437 17.8719C80.8307 18.1946 81.3367 18.5099 81.7617 18.8179C82.1877 19.1259 82.5317 19.4412 82.7957 19.7639C83.0597 20.0719 83.2507 20.4019 83.3677 20.7539C83.4997 21.0912 83.5657 21.4579 83.5657 21.8539C83.5657 22.3672 83.4707 22.8292 83.2797 23.2399C83.0897 23.6506 82.8177 24.0026 82.4657 24.2959C82.1137 24.5892 81.6887 24.8166 81.1897 24.9779C80.7057 25.1392 80.1637 25.2199 79.5617 25.2199C78.9317 25.2199 78.3447 25.1392 77.8017 24.9779C77.2597 24.8019 76.8117 24.5526 76.4597 24.2299L75.9757 24.9999Z" fill="var(--logo-color)"></path><path d="M75.9757 24.9999H75.2937V20.9959H76.2177C76.4677 22.0519 76.8267 22.8219 77.2957 23.3059C77.7657 23.7899 78.3737 24.0319 79.1217 24.0319C79.6647 24.0319 80.0827 23.9219 80.3757 23.7019C80.6837 23.4672 80.8377 23.1519 80.8377 22.7559C80.8377 22.3452 80.6547 21.9492 80.2877 21.5679C79.9217 21.1719 79.3277 20.7539 78.5057 20.3139C77.3917 19.7126 76.5917 19.1186 76.1077 18.5319C75.6237 17.9306 75.3817 17.2559 75.3817 16.5079C75.3817 16.0239 75.4697 15.5766 75.6457 15.1659C75.8367 14.7406 76.0857 14.3739 76.3937 14.0659C76.7167 13.7579 77.0977 13.5232 77.5377 13.3619C77.9777 13.1859 78.4547 13.0979 78.9677 13.0979C79.4227 13.0979 79.8697 13.1639 80.3097 13.2959C80.7647 13.4279 81.1607 13.6112 81.4977 13.8459L81.8937 13.3179H82.4657V16.6399H81.6077C81.2707 15.8039 80.9187 15.2026 80.5517 14.8359C80.1997 14.4692 79.7677 14.2859 79.2537 14.2859C78.8437 14.2859 78.5137 14.3959 78.2637 14.6159C78.0297 14.8359 77.9117 15.1292 77.9117 15.4959C77.9117 15.9066 78.0877 16.2952 78.4397 16.6619C78.8067 17.0286 79.4077 17.4319 80.2437 17.8719C80.8307 18.1946 81.3367 18.5099 81.7617 18.8179C82.1877 19.1259 82.5317 19.4412 82.7957 19.7639C83.0597 20.0719 83.2507 20.4019 83.3677 20.7539C83.4997 21.0912 83.5657 21.4579 83.5657 21.8539C83.5657 22.3672 83.4707 22.8292 83.2797 23.2399C83.0897 23.6506 82.8177 24.0026 82.4657 24.2959C82.1137 24.5892 81.6887 24.8166 81.1897 24.9779C80.7057 25.1392 80.1637 25.2199 79.5617 25.2199C78.9317 25.2199 78.3447 25.1392 77.8017 24.9779C77.2597 24.8019 76.8117 24.5526 76.4597 24.2299L75.9757 24.9999Z" fill="var(--logo-color)"></path><path d="M68.9587 16.9478C68.9587 16.3612 68.9437 15.8992 68.9147 15.5618C68.8853 15.2098 68.8047 14.9458 68.6727 14.7698C68.5407 14.5792 68.3427 14.4545 68.0787 14.3958C67.8293 14.3225 67.4847 14.2638 67.0447 14.2198V13.3398H72.0167V20.0058C72.0167 20.9005 72.0237 21.6045 72.0387 22.1178C72.0677 22.6165 72.1117 22.9905 72.1707 23.2398C72.2147 23.4305 72.2657 23.5845 72.3247 23.7018C72.3837 23.8045 72.4787 23.8925 72.6107 23.9658C72.7427 24.0245 72.9187 24.0685 73.1387 24.0978C73.3737 24.1125 73.6737 24.1198 74.0407 24.1198V24.9778L69.6627 25.2418L69.4207 23.2838H69.3327C68.9517 23.8998 68.416 24.3765 67.7267 24.7138C67.0373 25.0512 66.2673 25.2198 65.4167 25.2198C63.8473 25.2198 62.652 24.6625 61.8307 23.5478C61.2 22.6972 60.8847 21.4872 60.8847 19.9178V16.9478C60.8847 16.3465 60.87 15.8772 60.8407 15.5398C60.8113 15.1878 60.7307 14.9238 60.5987 14.7478C60.4813 14.5718 60.298 14.4545 60.0487 14.3958C59.7993 14.3225 59.4547 14.2638 59.0147 14.2198V13.3398H63.9427V19.5658C63.9427 21.0472 64.126 22.1252 64.4927 22.7998C64.8593 23.4598 65.446 23.7898 66.2527 23.7898C67.118 23.7898 67.7853 23.3938 68.2547 22.6018C68.724 21.8392 68.9587 20.7172 68.9587 19.2358V16.9478Z" fill="var(--logo-color)"></path><path d="M68.9587 16.9478C68.9587 16.3612 68.9437 15.8992 68.9147 15.5618C68.8853 15.2098 68.8047 14.9458 68.6727 14.7698C68.5407 14.5792 68.3427 14.4545 68.0787 14.3958C67.8293 14.3225 67.4847 14.2638 67.0447 14.2198V13.3398H72.0167V20.0058C72.0167 20.9005 72.0237 21.6045 72.0387 22.1178C72.0677 22.6165 72.1117 22.9905 72.1707 23.2398C72.2147 23.4305 72.2657 23.5845 72.3247 23.7018C72.3837 23.8045 72.4787 23.8925 72.6107 23.9658C72.7427 24.0245 72.9187 24.0685 73.1387 24.0978C73.3737 24.1125 73.6737 24.1198 74.0407 24.1198V24.9778L69.6627 25.2418L69.4207 23.2838H69.3327C68.9517 23.8998 68.416 24.3765 67.7267 24.7138C67.0373 25.0512 66.2673 25.2198 65.4167 25.2198C63.8473 25.2198 62.652 24.6625 61.8307 23.5478C61.2 22.6972 60.8847 21.4872 60.8847 19.9178V16.9478C60.8847 16.3465 60.87 15.8772 60.8407 15.5398C60.8113 15.1878 60.7307 14.9238 60.5987 14.7478C60.4813 14.5718 60.298 14.4545 60.0487 14.3958C59.7993 14.3225 59.4547 14.2638 59.0147 14.2198V13.3398H63.9427V19.5658C63.9427 21.0472 64.126 22.1252 64.4927 22.7998C64.8593 23.4598 65.446 23.7898 66.2527 23.7898C67.118 23.7898 67.7853 23.3938 68.2547 22.6018C68.724 21.8392 68.9587 20.7172 68.9587 19.2358V16.9478Z" fill="var(--logo-color)"></path><path d="M48.6182 21.4139C48.6182 22.0152 48.6328 22.4919 48.6622 22.8439C48.7062 23.1812 48.7868 23.4452 48.9042 23.6359C49.0362 23.8119 49.2268 23.9292 49.4762 23.9879C49.7402 24.0465 50.0922 24.0905 50.5322 24.1199V24.9999H43.6022V24.1199C44.0275 24.0905 44.3648 24.0465 44.6142 23.9879C44.8782 23.9292 45.0762 23.8119 45.2082 23.6359C45.3548 23.4599 45.4502 23.2105 45.4942 22.8879C45.5382 22.5652 45.5602 22.1252 45.5602 21.5679V18.8179C45.5602 17.9525 45.5455 17.2559 45.5162 16.7279C45.4868 16.1852 45.4502 15.8185 45.4062 15.6279C45.3622 15.4372 45.3035 15.2832 45.2302 15.1659C45.1568 15.0339 45.0468 14.9385 44.9002 14.8799C44.7535 14.8065 44.5702 14.7625 44.3502 14.7479C44.1302 14.7185 43.8515 14.7039 43.5142 14.7039V13.9559L47.7602 13.1199L48.0462 15.0559H48.1342C48.6182 14.4399 49.1902 13.9632 49.8502 13.6259C50.5102 13.2885 51.2362 13.1199 52.0282 13.1199C52.9668 13.1199 53.7222 13.2519 54.2942 13.5159C54.8808 13.7652 55.4015 14.1905 55.8562 14.7919C56.1055 15.1292 56.3255 15.5692 56.5162 16.1119C56.7068 16.6399 56.8022 17.3732 56.8022 18.3119V21.4139C56.8022 22.0152 56.8168 22.4919 56.8462 22.8439C56.8902 23.1812 56.9708 23.4452 57.0882 23.6359C57.2202 23.8119 57.4108 23.9292 57.6602 23.9879C57.9095 24.0465 58.2468 24.0905 58.6722 24.1199V24.9999H51.7862V24.1199C52.2262 24.1052 52.5708 24.0685 52.8202 24.0099C53.0842 23.9365 53.2822 23.8119 53.4142 23.6359C53.5462 23.4599 53.6342 23.2105 53.6782 22.8879C53.7222 22.5505 53.7442 22.1105 53.7442 21.5679V18.5759C53.7442 17.8279 53.7002 17.1972 53.6122 16.6839C53.5242 16.1705 53.3775 15.7599 53.1722 15.4519C52.9815 15.1292 52.7248 14.9019 52.4022 14.7699C52.0795 14.6232 51.6762 14.5499 51.1922 14.5499C50.7228 14.5499 50.3195 14.6819 49.9822 14.9459C49.6448 15.2099 49.3515 15.5765 49.1022 16.0459C48.9702 16.3099 48.8528 16.6545 48.7502 17.0799C48.6622 17.4905 48.6182 17.9232 48.6182 18.3779V21.4139Z" fill="var(--logo-color)"></path><path d="M48.6196 21.4139C48.6196 22.0152 48.6342 22.4919 48.6636 22.8439C48.7076 23.1812 48.7882 23.4452 48.9056 23.6359C49.0376 23.8119 49.2282 23.9292 49.4776 23.9879C49.7416 24.0465 50.0936 24.0905 50.5336 24.1199V24.9999H43.6036V24.1199C44.0289 24.0905 44.3662 24.0465 44.6156 23.9879C44.8796 23.9292 45.0776 23.8119 45.2096 23.6359C45.3562 23.4599 45.4516 23.2105 45.4956 22.8879C45.5396 22.5652 45.5616 22.1252 45.5616 21.5679V18.8179C45.5616 17.9525 45.5469 17.2559 45.5176 16.7279C45.4882 16.1852 45.4516 15.8185 45.4076 15.6279C45.3636 15.4372 45.3049 15.2832 45.2316 15.1659C45.1582 15.0339 45.0482 14.9385 44.9016 14.8799C44.7549 14.8065 44.5716 14.7625 44.3516 14.7479C44.1316 14.7185 43.8529 14.7039 43.5156 14.7039V13.9559L47.7616 13.1199L48.0476 15.0559H48.1356C48.6196 14.4399 49.1916 13.9632 49.8516 13.6259C50.5116 13.2885 51.2376 13.1199 52.0296 13.1199C52.9682 13.1199 53.7236 13.2519 54.2956 13.5159C54.8822 13.7652 55.4029 14.1905 55.8576 14.7919C56.1069 15.1292 56.3269 15.5692 56.5176 16.1119C56.7082 16.6399 56.8036 17.3732 56.8036 18.3119V21.4139C56.8036 22.0152 56.8182 22.4919 56.8476 22.8439C56.8916 23.1812 56.9722 23.4452 57.0896 23.6359C57.2216 23.8119 57.4122 23.9292 57.6616 23.9879C57.9109 24.0465 58.2482 24.0905 58.6736 24.1199V24.9999H51.7876V24.1199C52.2276 24.1052 52.5722 24.0685 52.8216 24.0099C53.0856 23.9365 53.2836 23.8119 53.4156 23.6359C53.5476 23.4599 53.6356 23.2105 53.6796 22.8879C53.7236 22.5505 53.7456 22.1105 53.7456 21.5679V18.5759C53.7456 17.8279 53.7016 17.1972 53.6136 16.6839C53.5256 16.1705 53.3789 15.7599 53.1736 15.4519C52.9829 15.1292 52.7262 14.9019 52.4036 14.7699C52.0809 14.6232 51.6776 14.5499 51.1936 14.5499C50.7242 14.5499 50.3209 14.6819 49.9836 14.9459C49.6462 15.2099 49.3529 15.5765 49.1036 16.0459C48.9716 16.3099 48.8542 16.6545 48.7516 17.0799C48.6636 17.4905 48.6196 17.9232 48.6196 18.3779V21.4139Z" fill="var(--logo-color)"></path><path d="M38.1193 18.7299C36.8873 19.2872 35.956 19.8079 35.3253 20.2919C34.7093 20.7612 34.4013 21.2525 34.4013 21.7659C34.4013 22.1912 34.5187 22.5285 34.7533 22.7779C34.988 23.0272 35.2813 23.1519 35.6333 23.1519C35.9853 23.1519 36.3153 23.0932 36.6233 22.9759C36.9313 22.8439 37.1953 22.6752 37.4153 22.4699C37.6353 22.2645 37.804 22.0225 37.9213 21.7439C38.0533 21.4505 38.1193 21.1425 38.1193 20.8199V18.7299ZM38.1193 17.5639V16.6399C38.1193 15.7892 37.9653 15.1732 37.6573 14.7919C37.364 14.3959 36.902 14.1979 36.2713 14.1979C35.846 14.1979 35.5233 14.3152 35.3033 14.5499C35.0833 14.7699 34.878 15.1439 34.6873 15.6719C34.5553 16.0385 34.3647 16.3245 34.1153 16.5299C33.8807 16.7352 33.5507 16.8379 33.1253 16.8379C32.7147 16.8379 32.3993 16.7132 32.1793 16.4639C31.9593 16.2145 31.8493 15.8625 31.8493 15.4079C31.8493 14.7039 32.2307 14.1465 32.9933 13.7359C33.7707 13.3252 34.9367 13.1199 36.4913 13.1199C38.134 13.1199 39.3073 13.4205 40.0113 14.0219C40.7153 14.6085 41.0673 15.5985 41.0673 16.9919V21.8099C41.0673 23.0565 41.3167 23.6799 41.8153 23.6799C42.094 23.6799 42.3507 23.5845 42.5853 23.3939L42.9153 24.0319C42.71 24.3985 42.3873 24.6919 41.9473 24.9119C41.522 25.1172 41.038 25.2199 40.4953 25.2199C39.8207 25.2199 39.3073 25.0145 38.9553 24.6039C38.6033 24.1932 38.4273 23.6139 38.4273 22.8659H38.3173C37.892 23.6285 37.342 24.2079 36.6673 24.6039C35.9927 24.9999 35.2227 25.1979 34.3573 25.1979C33.4333 25.1979 32.6927 24.9412 32.1353 24.4279C31.578 23.8999 31.2993 23.2179 31.2993 22.3819C31.2993 21.7365 31.5853 21.1352 32.1573 20.5779C32.7293 20.0059 33.6827 19.4485 35.0173 18.9059L38.1193 17.5639Z" fill="var(--logo-color)"></path><path d="M38.1208 18.7299C36.8888 19.2872 35.9575 19.8079 35.3268 20.2919C34.7108 20.7612 34.4028 21.2525 34.4028 21.7659C34.4028 22.1912 34.5202 22.5285 34.7548 22.7779C34.9895 23.0272 35.2828 23.1519 35.6348 23.1519C35.9868 23.1519 36.3168 23.0932 36.6248 22.9759C36.9328 22.8439 37.1968 22.6752 37.4168 22.4699C37.6368 22.2645 37.8055 22.0225 37.9228 21.7439C38.0548 21.4505 38.1208 21.1425 38.1208 20.8199V18.7299ZM38.1208 17.5639V16.6399C38.1208 15.7892 37.9668 15.1732 37.6588 14.7919C37.3655 14.3959 36.9035 14.1979 36.2728 14.1979C35.8475 14.1979 35.5248 14.3152 35.3048 14.5499C35.0848 14.7699 34.8795 15.1439 34.6888 15.6719C34.5568 16.0385 34.3662 16.3245 34.1168 16.5299C33.8822 16.7352 33.5522 16.8379 33.1268 16.8379C32.7162 16.8379 32.4008 16.7132 32.1808 16.4639C31.9608 16.2145 31.8508 15.8625 31.8508 15.4079C31.8508 14.7039 32.2322 14.1465 32.9948 13.7359C33.7722 13.3252 34.9382 13.1199 36.4928 13.1199C38.1355 13.1199 39.3088 13.4205 40.0128 14.0219C40.7168 14.6085 41.0688 15.5985 41.0688 16.9919V21.8099C41.0688 23.0565 41.3182 23.6799 41.8168 23.6799C42.0955 23.6799 42.3522 23.5845 42.5868 23.3939L42.9168 24.0319C42.7115 24.3985 42.3888 24.6919 41.9488 24.9119C41.5235 25.1172 41.0395 25.2199 40.4968 25.2199C39.8222 25.2199 39.3088 25.0145 38.9568 24.6039C38.6048 24.1932 38.4288 23.6139 38.4288 22.8659H38.3188C37.8935 23.6285 37.3435 24.2079 36.6688 24.6039C35.9942 24.9999 35.2242 25.1979 34.3588 25.1979C33.4348 25.1979 32.6942 24.9412 32.1368 24.4279C31.5795 23.8999 31.3008 23.2179 31.3008 22.3819C31.3008 21.7365 31.5868 21.1352 32.1588 20.5779C32.7308 20.0059 33.6842 19.4485 35.0188 18.9059L38.1208 17.5639Z" fill="var(--logo-color)"></path><path d="M12.1055 21.3699C12.1055 21.9859 12.1201 22.4699 12.1495 22.8219C12.1788 23.1739 12.2595 23.4452 12.3915 23.6359C12.5235 23.8119 12.7141 23.9292 12.9635 23.9879C13.2128 24.0465 13.5575 24.0905 13.9975 24.1199V24.9999H7.04549V24.1199C7.48549 24.0905 7.83749 24.0465 8.10149 23.9879C8.36549 23.9292 8.56349 23.8119 8.69549 23.6359C8.82749 23.4599 8.91549 23.2105 8.95949 22.8879C9.00349 22.5505 9.02549 22.1032 9.02549 21.5459V18.8179C9.02549 17.9819 9.01079 17.2852 8.98149 16.7279C8.96679 16.1705 8.93009 15.7892 8.87149 15.5839C8.82749 15.3932 8.76879 15.2465 8.69549 15.1439C8.63679 15.0265 8.53409 14.9385 8.38749 14.8799C8.25549 14.8065 8.07949 14.7625 7.85949 14.7479C7.63949 14.7185 7.35349 14.7039 7.00149 14.7039V13.9559L11.2475 13.1199L11.5115 15.0339H11.6435C12.2595 14.3445 12.8755 13.8532 13.4915 13.5599C14.1221 13.2665 14.8481 13.1199 15.6695 13.1199C16.6375 13.1199 17.4368 13.2885 18.0675 13.6259C18.6981 13.9632 19.1748 14.4472 19.4975 15.0779H19.5855C20.1135 14.4619 20.7441 13.9852 21.4775 13.6479C22.2108 13.2959 22.9955 13.1199 23.8315 13.1199C24.7115 13.1199 25.4741 13.2299 26.1195 13.4499C26.7795 13.6699 27.2928 13.9852 27.6595 14.3959C27.9528 14.7332 28.1655 15.1732 28.2975 15.7159C28.4441 16.2585 28.5175 17.0139 28.5175 17.9819V21.3699C28.5175 21.9712 28.5321 22.4479 28.5615 22.7999C28.6055 23.1519 28.6935 23.4232 28.8255 23.6139C28.9575 23.8045 29.1481 23.9292 29.3975 23.9879C29.6468 24.0465 29.9915 24.0905 30.4315 24.1199V24.9999H23.4795V24.1199C23.9195 24.1052 24.2641 24.0685 24.5135 24.0099C24.7775 23.9365 24.9755 23.8119 25.1075 23.6359C25.2541 23.4452 25.3421 23.1885 25.3715 22.8659C25.4155 22.5432 25.4375 22.1032 25.4375 21.5459V18.6639C25.4375 17.9012 25.3935 17.2559 25.3055 16.7279C25.2175 16.1999 25.0781 15.7745 24.8875 15.4519C24.6968 15.1292 24.4401 14.9019 24.1175 14.7699C23.8095 14.6232 23.4281 14.5499 22.9735 14.5499C22.4601 14.5499 22.0348 14.6745 21.6975 14.9239C21.3748 15.1732 21.1035 15.4959 20.8835 15.8919C20.5021 16.5812 20.3115 17.4392 20.3115 18.4659V21.3699C20.3115 21.9712 20.3261 22.4479 20.3555 22.7999C20.3848 23.1519 20.4655 23.4232 20.5975 23.6139C20.7295 23.8045 20.9201 23.9292 21.1695 23.9879C21.4335 24.0465 21.7928 24.0905 22.2475 24.1199V24.9999H15.2735V24.1199C15.7135 24.0905 16.0581 24.0465 16.3075 23.9879C16.5715 23.9292 16.7695 23.8119 16.9015 23.6359C17.0481 23.4599 17.1361 23.2105 17.1655 22.8879C17.2095 22.5505 17.2315 22.1032 17.2315 21.5459V18.6639C17.2315 17.9012 17.1875 17.2559 17.0995 16.7279C17.0115 16.1999 16.8648 15.7745 16.6595 15.4519C16.4688 15.1292 16.2121 14.9019 15.8895 14.7699C15.5668 14.6232 15.1635 14.5499 14.6795 14.5499C14.1955 14.5499 13.7921 14.6672 13.4695 14.9019C13.1615 15.1365 12.9048 15.4519 12.6995 15.8479C12.5088 16.1999 12.3621 16.6032 12.2595 17.0579C12.1568 17.5125 12.1055 17.9819 12.1055 18.4659V21.3699Z" fill="var(--logo-color)"></path><path d="M12.104 21.3699C12.104 21.9859 12.1186 22.4699 12.148 22.8219C12.1773 23.1739 12.258 23.4452 12.39 23.6359C12.522 23.8119 12.7126 23.9292 12.962 23.9879C13.2113 24.0465 13.556 24.0905 13.996 24.1199V24.9999H7.044V24.1199C7.484 24.0905 7.836 24.0465 8.1 23.9879C8.364 23.9292 8.562 23.8119 8.694 23.6359C8.826 23.4599 8.914 23.2105 8.958 22.8879C9.002 22.5505 9.024 22.1032 9.024 21.5459V18.8179C9.024 17.9819 9.0093 17.2852 8.98 16.7279C8.9653 16.1705 8.9286 15.7892 8.87 15.5839C8.826 15.3932 8.7673 15.2465 8.694 15.1439C8.6353 15.0265 8.5326 14.9385 8.386 14.8799C8.254 14.8065 8.078 14.7625 7.858 14.7479C7.638 14.7185 7.352 14.7039 7 14.7039V13.9559L11.246 13.1199L11.51 15.0339H11.642C12.258 14.3445 12.874 13.8532 13.49 13.5599C14.1206 13.2665 14.8466 13.1199 15.668 13.1199C16.636 13.1199 17.4353 13.2885 18.066 13.6259C18.6966 13.9632 19.1733 14.4472 19.496 15.0779H19.584C20.112 14.4619 20.7426 13.9852 21.476 13.6479C22.2093 13.2959 22.994 13.1199 23.83 13.1199C24.71 13.1199 25.4726 13.2299 26.118 13.4499C26.778 13.6699 27.2913 13.9852 27.658 14.3959C27.9513 14.7332 28.164 15.1732 28.296 15.7159C28.4426 16.2585 28.516 17.0139 28.516 17.9819V21.3699C28.516 21.9712 28.5306 22.4479 28.56 22.7999C28.604 23.1519 28.692 23.4232 28.824 23.6139C28.956 23.8045 29.1466 23.9292 29.396 23.9879C29.6453 24.0465 29.99 24.0905 30.43 24.1199V24.9999H23.478V24.1199C23.918 24.1052 24.2626 24.0685 24.512 24.0099C24.776 23.9365 24.974 23.8119 25.106 23.6359C25.2526 23.4452 25.3406 23.1885 25.37 22.8659C25.414 22.5432 25.436 22.1032 25.436 21.5459V18.6639C25.436 17.9012 25.392 17.2559 25.304 16.7279C25.216 16.1999 25.0766 15.7745 24.886 15.4519C24.6953 15.1292 24.4386 14.9019 24.116 14.7699C23.808 14.6232 23.4266 14.5499 22.972 14.5499C22.4586 14.5499 22.0333 14.6745 21.696 14.9239C21.3733 15.1732 21.102 15.4959 20.882 15.8919C20.5006 16.5812 20.31 17.4392 20.31 18.4659V21.3699C20.31 21.9712 20.3246 22.4479 20.354 22.7999C20.3833 23.1519 20.464 23.4232 20.596 23.6139C20.728 23.8045 20.9186 23.9292 21.168 23.9879C21.432 24.0465 21.7913 24.0905 22.246 24.1199V24.9999H15.272V24.1199C15.712 24.0905 16.0566 24.0465 16.306 23.9879C16.57 23.9292 16.768 23.8119 16.9 23.6359C17.0466 23.4599 17.1346 23.2105 17.164 22.8879C17.208 22.5505 17.23 22.1032 17.23 21.5459V18.6639C17.23 17.9012 17.186 17.2559 17.098 16.7279C17.01 16.1999 16.8633 15.7745 16.658 15.4519C16.4673 15.1292 16.2106 14.9019 15.888 14.7699C15.5653 14.6232 15.162 14.5499 14.678 14.5499C14.194 14.5499 13.7906 14.6672 13.468 14.9019C13.16 15.1365 12.9033 15.4519 12.698 15.8479C12.5073 16.1999 12.3606 16.6032 12.258 17.0579C12.1553 17.5125 12.104 17.9819 12.104 18.4659V21.3699Z" fill="var(--logo-color)"></path></svg></div>
+                </a></div>
+            </div>
+            <div class="framer-pfzjn3" data-framer-name="Link" style="transform: translate(-50%, -50%); opacity: 1;">
+              <div class="framer-8wrchh-container" id="undefined-8wrchh" style="opacity: 1;"><a
+                  class="framer-wODIw framer-1g84uu8 framer-v-1g84uu8 framer-auqp9x" data-framer-name="Variant 1"
+                  data-highlight="true" style="background-color: rgba(0, 0, 0, 0); border-radius: 8px; opacity: 1;">
+                  <div class="framer-5xok8q" data-framer-name="label" data-framer-component-type="RichTextContainer"
+                    style="--extracted-r6o4lv: rgb(94, 94, 90); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <p class="framer-text"
+                      style="--font-selector: X19TeXN0ZW1EZWZhdWx0LTUwMC1ub3JtYWxfXw==; --framer-font-family: &quot;system-ui&quot;, &quot;-apple-system&quot;, &quot;BlinkMacSystemFont&quot;, &quot;Segoe UI&quot;, &quot;Roboto&quot;, &quot;Oxygen&quot;, &quot;Ubuntu&quot;, &quot;Cantarell&quot;, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif, &quot;System Default&quot;, sans-serif; --framer-font-size: 14px; --framer-font-weight: 500; --framer-line-height: 20px; --framer-text-color: var(--extracted-r6o4lv, rgb(94, 94, 90));" data-i18n="nav-home">首页</p>
+                  </div>
+                </a></div>
+              <div class="framer-zs2wme-container" id="undefined-zs2wme" style="opacity: 1;"><a
+                  class="framer-wODIw framer-1g84uu8 framer-v-1g84uu8 framer-auqp9x" data-framer-name="Variant 1"
+                  data-highlight="true" href="https://docs.ai-manus.com" rel="noopener" target="_blank" style="background-color: rgba(0, 0, 0, 0); border-radius: 8px; opacity: 1;">
+                  <div class="framer-5xok8q" data-framer-name="label" data-framer-component-type="RichTextContainer"
+                    style="--extracted-r6o4lv: rgb(94, 94, 90); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <p class="framer-text"
+                      style="--font-selector: X19TeXN0ZW1EZWZhdWx0LTUwMC1ub3JtYWxfXw==; --framer-font-family: &quot;system-ui&quot;, &quot;-apple-system&quot;, &quot;BlinkMacSystemFont&quot;, &quot;Segoe UI&quot;, &quot;Roboto&quot;, &quot;Oxygen&quot;, &quot;Ubuntu&quot;, &quot;Cantarell&quot;, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif, &quot;System Default&quot;, sans-serif; --framer-font-size: 14px; --framer-font-weight: 500; --framer-line-height: 20px; --framer-text-color: var(--extracted-r6o4lv, rgb(94, 94, 90));" data-i18n="nav-docs">文档</p>
+                  </div>
+                </a></div>
+              <div class="framer-18pwyr-container" style="opacity: 1;"><a
+                  class="framer-wODIw framer-1g84uu8 framer-v-1g84uu8 framer-auqp9x" data-framer-name="Variant 1"
+                  data-highlight="true" href="https://github.com/Simpleyyt/ai-manus" rel="noopener" target="_blank"
+                  style="background-color: rgba(0, 0, 0, 0); border-radius: 8px; opacity: 1;">
+                  <div class="framer-5xok8q" data-framer-name="label" data-framer-component-type="RichTextContainer"
+                    style="--extracted-r6o4lv: rgb(94, 94, 90); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <p class="framer-text"
+                      style="--font-selector: X19TeXN0ZW1EZWZhdWx0LTUwMC1ub3JtYWxfXw==; --framer-font-family: &quot;system-ui&quot;, &quot;-apple-system&quot;, &quot;BlinkMacSystemFont&quot;, &quot;Segoe UI&quot;, &quot;Roboto&quot;, &quot;Oxygen&quot;, &quot;Ubuntu&quot;, &quot;Cantarell&quot;, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif, &quot;System Default&quot;, sans-serif; --framer-font-size: 14px; --framer-font-weight: 500; --framer-line-height: 20px; --framer-text-color: var(--extracted-r6o4lv, rgb(94, 94, 90));">GitHub</p>
+                  </div>
+                </a></div>
+              <div class="framer-4khhfz-container" style="opacity: 1;"><a
+                  class="framer-wODIw framer-1g84uu8 framer-v-1g84uu8 framer-auqp9x" data-framer-name="Variant 1"
+                  data-highlight="true" href="https://app.ai-manus.com/" rel="noopener" target="_blank"
+                  style="background-color: rgba(0, 0, 0, 0); border-radius: 8px; opacity: 1;">
+                  <div class="framer-5xok8q" data-framer-name="label" data-framer-component-type="RichTextContainer"
+                    style="--extracted-r6o4lv: rgb(94, 94, 90); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <p class="framer-text"
+                      style="--font-selector: X19TeXN0ZW1EZWZhdWx0LTUwMC1ub3JtYWxfXw==; --framer-font-family: &quot;system-ui&quot;, &quot;-apple-system&quot;, &quot;BlinkMacSystemFont&quot;, &quot;Segoe UI&quot;, &quot;Roboto&quot;, &quot;Oxygen&quot;, &quot;Ubuntu&quot;, &quot;Cantarell&quot;, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif, &quot;System Default&quot;, sans-serif; --framer-font-size: 14px; --framer-font-weight: 500; --framer-line-height: 20px; --framer-text-color: var(--extracted-r6o4lv, rgb(94, 94, 90));">Demo</p>
+                  </div>
+                </a></div>
+            </div>
+            <div class="framer-1tag21w" style="opacity: 1;">
+              <div class="framer-19uiiqi-container" style="opacity: 1;">
+                <div class="framer-locale-picker" style="height: 100%; max-width: 100%; position: relative; cursor: pointer;" id="lang-picker">
+                  <div class="input"
+                    style="font-family: &quot;system-ui&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif, &quot;System Default&quot;, sans-serif; font-size: 14px; font-style: normal; font-weight: 500; letter-spacing: 0em; line-height: 20px; --framer-color: rgb(94, 94, 91); padding: 12px; border-radius: 8px; border: none; background: transparent; cursor: pointer; display: flex; align-items: center; gap: 4px;">
+                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="18"
+                        height="18" fill="rgb(94, 94, 91)">
+                        <path
+                          d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm87.63,96H175.8c-1.41-28.46-10.27-55.47-25.12-77A88.2,88.2,0,0,1,215.63,120ZM128,215.89c-18.73-20.27-30.09-49-31.77-79.89h63.54C158.09,166.87,146.73,195.62,128,215.89ZM96.23,120c1.68-30.87,13-59.62,31.77-79.89,18.73,20.27,30.09,49,31.77,79.89Zm9.09-77C90.47,64.53,81.61,91.54,80.2,120H40.37A88.2,88.2,0,0,1,105.32,43ZM40.37,136H80.2c1.41,28.46,10.27,55.47,25.12,77A88.2,88.2,0,0,1,40.37,136Zm110.31,77c14.85-21.56,23.71-48.57,25.12-77h39.83A88.2,88.2,0,0,1,150.68,213Z">
+                        </path>
+                      </svg></div>
+                    <div class="title" id="lang-label">简体中文</div>
+                    <div class="caret"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="12"
+                        height="12">
+                        <path d="M 2 4.5 L 6 8.5 L 10 4.5" fill="none" stroke="rgb(94, 94, 91)" stroke-width="1.5"
+                          stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg></div>
+                  </div>
+                  <div id="lang-dropdown" style="display:none; position: absolute; top: calc(100% + 4px); right: 0; background: #fff; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.08); overflow: hidden; z-index: 999; min-width: 130px;">
+                    <div class="lang-option" data-lang="zh" style="padding: 10px 16px; font-size: 14px; font-weight: 500; color: rgb(52,50,45); cursor: pointer; display: flex; align-items: center; gap: 8px;" onmouseenter="this.style.background='rgba(0,0,0,0.04)'" onmouseleave="this.style.background='transparent'">
+                      <span>简体中文</span>
+                    </div>
+                    <div class="lang-option" data-lang="en" style="padding: 10px 16px; font-size: 14px; font-weight: 500; color: rgb(52,50,45); cursor: pointer; display: flex; align-items: center; gap: 8px;" onmouseenter="this.style.background='rgba(0,0,0,0.04)'" onmouseleave="this.style.background='transparent'">
+                      <span>English</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="framer-1l8z0kr-container" style="opacity: 1;">
+                <a class="github-nav-btn" href="https://github.com/ai-manus" target="_blank" rel="noopener"
+                  style="display: inline-flex; align-items: center; gap: 6px; padding: 0 16px; height: 100%; border-radius: 999px; background-color: transparent; border: 1.5px solid rgba(52, 50, 45, 0.2); color: rgb(52, 50, 45); text-decoration: none; font-size: 14px; font-weight: 500; transition: background-color 0.2s, border-color 0.2s;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="rgb(52, 50, 45)">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  GitHub
+                </a>
+              </div>
+              <div class="framer-1l8z0kr-container" style="opacity: 1;"><a
+                  class="framer-S5bdX framer-cmMDS framer-iy8tgj framer-v-1gytzxg framer-hbjxa3"
+                  data-framer-name="Primary-M" href="https://app.ai-manus.com/" target="_blank" rel="noopener"
+                  style="background-color: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); height: 100%; border-radius: 999px; opacity: 1;">
+                  <div class="framer-yfl2gi" data-framer-name="label" data-framer-component-type="RichTextContainer"
+                    style="--extracted-r6o4lv: rgb(255, 255, 255); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                      <p class="framer-text framer-styles-preset-hw2ngh" data-styles-preset="gO0yWW2T4" dir="auto"
+                        style="--framer-text-color: var(--extracted-r6o4lv, rgb(255, 255, 255));" data-i18n="try-demo">体验 Demo</p>
+                  </div>
+                </a></div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <style data-framer-html-style="">
+        html body {
+          background: rgb(248, 248, 248);
+        }
+
+        html {
+          font-size: 100%;
+        }
+      </style>
+      <div data-framer-root="" class="framer-531M1 framer-X39Rs framer-NM5f4 framer-gYzTM framer-1byk7v4"
+        style="min-height: 100vh; width: auto; display: contents;">
+        <div class="framer-177u5qc-container">
+          <div class="framer-hvm0N framer-KLz0o framer-gYzTM framer-cf3d28 framer-v-oesjgv" data-framer-name="YouTube"
+            style="width: 100%; opacity: 1;">
+            <div class="framer-egsxqx" data-framer-name="Main Content" style="opacity: 1;">
+              <div class="framer-1j497om" style="opacity: 1;">
+                <div class="framer-91itaj" style="opacity: 1;">
+                  <div class="framer-ua2fs4" data-framer-name="Main Heading"
+                    data-framer-component-type="RichTextContainer"
+                    style="--extracted-gdpscs: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <h1 class="framer-text framer-styles-preset-qfotcf" data-styles-preset="vDoAnLjl8"
+                      style="--framer-text-alignment: center; --framer-text-color: var(--extracted-gdpscs, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="hero-title">AI Manus：通用的 AI Agent 系统，在沙盒中运行各种工具。</h1>
+                  </div>
+                  <div class="framer-1fli9c6"
+                    data-framer-name="Turn any email into action. Your fastest path from inbox to getting work done."
+                    data-framer-component-type="RichTextContainer"
+                    style="--extracted-r6o4lv: var(--token-cdbb0e1f-c1ce-4975-a9ed-d5050ee7ee5b, rgb(94, 94, 91)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                      style="--framer-text-alignment: center; --framer-text-color: var(--extracted-r6o4lv, var(--token-cdbb0e1f-c1ce-4975-a9ed-d5050ee7ee5b, rgb(94, 94, 91)));" data-i18n="hero-desc">
+                      支持 Terminal、Browser、File、Web Search，支持 MCP 集成。用 AI Manus 开启你的智能体之旅。</p>
+                  </div>
+                </div>
+                <div class="framer-eajarx-container" style="opacity: 1;"><a
+                    class="framer-S5bdX framer-cmMDS framer-iy8tgj framer-v-iy8tgj framer-hbjxa3"
+                    data-framer-name="Primary" href="https://app.ai-manus.com/" target="_blank" rel="noopener"
+                    style="background-color: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); border-radius: 999px; opacity: 1;">
+                    <div class="framer-yfl2gi" data-framer-name="label" data-framer-component-type="RichTextContainer"
+                      style="--extracted-r6o4lv: rgb(255, 255, 255); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                      <p class="framer-text framer-styles-preset-hw2ngh" data-styles-preset="gO0yWW2T4" dir="auto"
+                        style="--framer-text-color: var(--extracted-r6o4lv, rgb(255, 255, 255));" data-i18n="try-demo">体验 Demo</p>
+                    </div>
+                  </a></div>
+              </div>
+              <div class="framer-1nuv6r-container" style="opacity: 1;">
+                <article role="presentation"
+                  style="position: relative; width: 100%; height: 100%; border-radius: 16px; transform: unset; overflow: hidden; border: 2px solid rgba(0, 0, 0, 0.12); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
+                  <div class="video-with-big-play" style="position: relative; width: 100%; height: 100%;">
+                    <video id="hero-video" playsinline
+                      style="display: block; width: 100%; height: 100%; object-fit: cover;"
+                      title="AI Manus 演示 - 电脑接管">
+                      <source src="https://github.com/user-attachments/assets/37060a09-c647-4bcb-920c-959f7fa73ebe" type="video/mp4">
+                      <span data-i18n="video-unsupported">您的浏览器不支持视频播放。</span>
+                    </video>
+                    <button type="button" class="video-big-play-btn" aria-label="播放/暂停" title="播放/暂停" data-i18n-aria="play-pause"></button>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="framer-1g6mor9-container">
+          <div class="framer-ZHKun framer-qot2xp framer-v-qot2xp" data-framer-name="Variant 1"
+            style="width: 100%; opacity: 1;">
+            <div class="framer-16qwrce" data-framer-name="Main Content" style="opacity: 1;">
+              <div class="framer-1ism369-container" style="opacity: 1;">
+                <div class="framer-KQYTp framer-pGyeG framer-gYzTM framer-1v6im3d framer-v-1v6im3d"
+                  data-framer-name="Variant 1" style="width: 100%; opacity: 1;">
+                  <div class="framer-1n30kki" data-framer-name="Main Heading"
+                    data-framer-component-type="RichTextContainer"
+                    style="--extracted-1of0zx5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <h2 class="framer-text framer-styles-preset-fv1517" data-styles-preset="v5E1UZeye"
+                      style="--framer-text-alignment: center; --framer-text-color: var(--extracted-1of0zx5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="features-title">AI Manus 的优点</h2>
+                  </div>
+                  <div class="framer-uoq2r2"
+                    data-framer-component-type="RichTextContainer"
+                    style="--extracted-r6o4lv: var(--token-cdbb0e1f-c1ce-4975-a9ed-d5050ee7ee5b, rgb(94, 94, 91)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                      style="--framer-text-alignment: center; --framer-text-color: var(--extracted-r6o4lv, var(--token-cdbb0e1f-c1ce-4975-a9ed-d5050ee7ee5b, rgb(94, 94, 91)));" data-i18n="features-subtitle">最小只需一个 LLM 即可部署，功能完整，开箱即用</p>
+                  </div>
+                </div>
+              </div>
+              <div class="framer-1q0par0" style="opacity: 1; flex-wrap: wrap; gap: 16px; justify-content: center;">
+                <div class="framer-1nk6dna-container" style="opacity: 1; flex: 1 1 280px; max-width: 340px;">
+                  <div class="framer-JQTSG framer-X39Rs framer-gYzTM framer-re6j3t framer-v-re6j3t"
+                    data-framer-name="Variant 1" style="width: 100%; border-radius: 16px; opacity: 1;">
+                    <div class="framer-10s25ef" data-framer-name="Icon Container"
+                      style="background-color: rgba(55, 53, 47, 0.06); border-radius: 8px; opacity: 1;">
+                      <svg class="framer-15konr7" role="presentation" viewBox="0 0 24 24"
+                        style="width:20px;height:20px;fill:none;stroke:rgb(94,94,91);stroke-width:2;opacity:1;">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                      </svg>
+                    </div>
+                    <div class="framer-1lmoipp" data-framer-name="Text Container" style="opacity: 1;">
+                      <div class="framer-1faxvp9" data-framer-component-type="RichTextContainer"
+                        style="--extracted-1w1cjl5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-1w1cjl5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="feat1-title">极简部署</h6>
+                      </div>
+                      <div class="framer-18ffc2c" data-framer-component-type="RichTextContainer"
+                        style="--extracted-r6o4lv: var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-r6o4lv, var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)));" data-i18n="feat1-desc">最小只需一个 LLM 服务即可完成部署，无需依赖任何其他外部服务。</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="framer-121n9x2-container" style="opacity: 1; flex: 1 1 280px; max-width: 340px;">
+                  <div class="framer-JQTSG framer-X39Rs framer-gYzTM framer-re6j3t framer-v-re6j3t"
+                    data-framer-name="Variant 1" style="width: 100%; border-radius: 16px; opacity: 1;">
+                    <div class="framer-10s25ef" data-framer-name="Icon Container"
+                      style="background-color: rgba(55, 53, 47, 0.06); border-radius: 8px; opacity: 1;">
+                      <svg class="framer-15konr7" role="presentation" viewBox="0 0 24 24"
+                        style="width:20px;height:20px;fill:none;stroke:rgb(94,94,91);stroke-width:2;opacity:1;">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/>
+                      </svg>
+                    </div>
+                    <div class="framer-1lmoipp" data-framer-name="Text Container" style="opacity: 1;">
+                      <div class="framer-1faxvp9" data-framer-component-type="RichTextContainer"
+                        style="--extracted-1w1cjl5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-1w1cjl5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="feat2-title">丰富工具集</h6>
+                      </div>
+                      <div class="framer-18ffc2c" data-framer-component-type="RichTextContainer"
+                        style="--extracted-r6o4lv: var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-r6o4lv, var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)));" data-i18n="feat2-desc">支持 Terminal、Browser、File、Web Search 及消息工具，并支持实时查看和接管。</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="framer-brzhnz-container" style="opacity: 1; flex: 1 1 280px; max-width: 340px;">
+                  <div class="framer-JQTSG framer-X39Rs framer-gYzTM framer-re6j3t framer-v-re6j3t"
+                    data-framer-name="Variant 1" style="width: 100%; border-radius: 16px; opacity: 1;">
+                    <div class="framer-10s25ef" data-framer-name="Icon Container"
+                      style="background-color: rgba(55, 53, 47, 0.06); border-radius: 8px; opacity: 1;">
+                      <svg class="framer-15konr7" role="presentation" viewBox="0 0 24 24"
+                        style="width:20px;height:20px;fill:none;stroke:rgb(94,94,91);stroke-width:2;opacity:1;">
+                        <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+                      </svg>
+                    </div>
+                    <div class="framer-1lmoipp" data-framer-name="Text Container" style="opacity: 1;">
+                      <div class="framer-1faxvp9" data-framer-component-type="RichTextContainer"
+                        style="--extracted-1w1cjl5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-1w1cjl5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="feat3-title">沙盒隔离</h6>
+                      </div>
+                      <div class="framer-18ffc2c" data-framer-component-type="RichTextContainer"
+                        style="--extracted-r6o4lv: var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-r6o4lv, var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)));" data-i18n="feat3-desc">每个 Task 分配独立沙盒，在本地 Docker 环境中安全运行，互不干扰。</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="opacity: 1; flex: 1 1 280px; max-width: 340px; position: relative;">
+                  <div class="framer-JQTSG framer-X39Rs framer-gYzTM framer-re6j3t framer-v-re6j3t"
+                    data-framer-name="Variant 1" style="width: 100%; border-radius: 16px; opacity: 1;">
+                    <div class="framer-10s25ef" data-framer-name="Icon Container"
+                      style="background-color: rgba(55, 53, 47, 0.06); border-radius: 8px; opacity: 1;">
+                      <svg class="framer-15konr7" role="presentation" viewBox="0 0 24 24"
+                        style="width:20px;height:20px;fill:none;stroke:rgb(94,94,91);stroke-width:2;opacity:1;">
+                        <path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 6v6l4 2"/>
+                      </svg>
+                    </div>
+                    <div class="framer-1lmoipp" data-framer-name="Text Container" style="opacity: 1;">
+                      <div class="framer-1faxvp9" data-framer-component-type="RichTextContainer"
+                        style="--extracted-1w1cjl5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-1w1cjl5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="feat4-title">任务会话</h6>
+                      </div>
+                      <div class="framer-18ffc2c" data-framer-component-type="RichTextContainer"
+                        style="--extracted-r6o4lv: var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-r6o4lv, var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)));" data-i18n="feat4-desc">通过 MongoDB/Redis 管理会话历史，支持后台长任务持续运行。</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="opacity: 1; flex: 1 1 280px; max-width: 340px; position: relative;">
+                  <div class="framer-JQTSG framer-X39Rs framer-gYzTM framer-re6j3t framer-v-re6j3t"
+                    data-framer-name="Variant 1" style="width: 100%; border-radius: 16px; opacity: 1;">
+                    <div class="framer-10s25ef" data-framer-name="Icon Container"
+                      style="background-color: rgba(55, 53, 47, 0.06); border-radius: 8px; opacity: 1;">
+                      <svg class="framer-15konr7" role="presentation" viewBox="0 0 24 24"
+                        style="width:20px;height:20px;fill:none;stroke:rgb(94,94,91);stroke-width:2;opacity:1;">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                      </svg>
+                    </div>
+                    <div class="framer-1lmoipp" data-framer-name="Text Container" style="opacity: 1;">
+                      <div class="framer-1faxvp9" data-framer-component-type="RichTextContainer"
+                        style="--extracted-1w1cjl5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-1w1cjl5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="feat5-title">灵活对话</h6>
+                      </div>
+                      <div class="framer-18ffc2c" data-framer-component-type="RichTextContainer"
+                        style="--extracted-r6o4lv: var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-r6o4lv, var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)));" data-i18n="feat5-desc">支持随时停止与打断，支持文件上传与下载，交互体验流畅自然。</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="opacity: 1; flex: 1 1 280px; max-width: 340px; position: relative;">
+                  <div class="framer-JQTSG framer-X39Rs framer-gYzTM framer-re6j3t framer-v-re6j3t"
+                    data-framer-name="Variant 1" style="width: 100%; border-radius: 16px; opacity: 1;">
+                    <div class="framer-10s25ef" data-framer-name="Icon Container"
+                      style="background-color: rgba(55, 53, 47, 0.06); border-radius: 8px; opacity: 1;">
+                      <svg class="framer-15konr7" role="presentation" viewBox="0 0 24 24"
+                        style="width:20px;height:20px;fill:none;stroke:rgb(94,94,91);stroke-width:2;opacity:1;">
+                        <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/>
+                      </svg>
+                    </div>
+                    <div class="framer-1lmoipp" data-framer-name="Text Container" style="opacity: 1;">
+                      <div class="framer-1faxvp9" data-framer-component-type="RichTextContainer"
+                        style="--extracted-1w1cjl5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-1w1cjl5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="feat6-title">多语言支持</h6>
+                      </div>
+                      <div class="framer-18ffc2c" data-framer-component-type="RichTextContainer"
+                        style="--extracted-r6o4lv: var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-r6o4lv, var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)));" data-i18n="feat6-desc">界面同时支持中文与英文，满足不同语言用户的使用需求。</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="opacity: 1; flex: 1 1 280px; max-width: 340px; position: relative;">
+                  <div class="framer-JQTSG framer-X39Rs framer-gYzTM framer-re6j3t framer-v-re6j3t"
+                    data-framer-name="Variant 1" style="width: 100%; border-radius: 16px; opacity: 1;">
+                    <div class="framer-10s25ef" data-framer-name="Icon Container"
+                      style="background-color: rgba(55, 53, 47, 0.06); border-radius: 8px; opacity: 1;">
+                      <svg class="framer-15konr7" role="presentation" viewBox="0 0 24 24"
+                        style="width:20px;height:20px;fill:none;stroke:rgb(94,94,91);stroke-width:2;opacity:1;">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                      </svg>
+                    </div>
+                    <div class="framer-1lmoipp" data-framer-name="Text Container" style="opacity: 1;">
+                      <div class="framer-1faxvp9" data-framer-component-type="RichTextContainer"
+                        style="--extracted-1w1cjl5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-1w1cjl5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="feat7-title">用户认证</h6>
+                      </div>
+                      <div class="framer-18ffc2c" data-framer-component-type="RichTextContainer"
+                        style="--extracted-r6o4lv: var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-r6o4lv, var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)));" data-i18n="feat7-desc">内置用户登录与认证机制，保障系统访问安全。</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="framer-oabouq-container">
+          <div class="framer-MYafR framer-1tez0kz framer-v-1tez0kz" data-framer-name="Variant 1"
+            style="width: 100%; opacity: 1;">
+            <div class="framer-s3tssr" data-framer-name="Main Content" style="opacity: 1;">
+              <div class="framer-1rex24b-container" style="opacity: 1;">
+                <div class="framer-KQYTp framer-pGyeG framer-gYzTM framer-1v6im3d framer-v-1v6im3d"
+                  data-framer-name="Variant 1" style="width: 100%; opacity: 1;">
+                  <div class="framer-1n30kki" data-framer-name="Main Heading"
+                    data-framer-component-type="RichTextContainer"
+                    style="--extracted-1of0zx5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <h2 class="framer-text framer-styles-preset-fv1517" data-styles-preset="v5E1UZeye"
+                      style="--framer-text-alignment: center; --framer-text-color: var(--extracted-1of0zx5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="demo-title">功能展示</h2>
+                  </div>
+                  <div class="framer-uoq2r2"
+                    data-framer-component-type="RichTextContainer"
+                    style="--extracted-r6o4lv: var(--token-cdbb0e1f-c1ce-4975-a9ed-d5050ee7ee5b, rgb(94, 94, 91)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                      style="--framer-text-alignment: center; --framer-text-color: var(--extracted-r6o4lv, var(--token-cdbb0e1f-c1ce-4975-a9ed-d5050ee7ee5b, rgb(94, 94, 91)));" data-i18n="demo-subtitle">真实场景演示，看看 AI Manus 如何完成任务</p>
+                  </div>
+                </div>
+              </div>
+              <div class="framer-1ar31qd" style="opacity: 1;">
+                <div class="framer-14ize3q-container" style="opacity: 1;">
+                  <div class="framer-fRJGb framer-X39Rs framer-gYzTM framer-s6gdki framer-v-s6gdki framer-vbne96"
+                    data-framer-name="Variant 1" style="width: 100%; border-radius: 16px; opacity: 1;">
+                    <div class="framer-xczo4n" style="border-radius: 16px; opacity: 1; overflow: hidden;">
+                      <div class="framer-1j2rfkl" style="opacity: 1; background: #000;">
+                        <div class="video-with-big-play video-with-big-play--sm" style="position: absolute; inset: 0; width: 100%; height: 100%;">
+                          <video style="width: 100%; height: 100%; object-fit: contain; display: block;"
+                            src="https://raw.githubusercontent.com/Simpleyyt/picgo-image/master/takeover.mp4"></video>
+                          <button type="button" class="video-big-play-btn" aria-label="播放/暂停" title="播放/暂停"></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="framer-1i3y03n" data-framer-name="Text Container" style="opacity: 1;">
+                      <div class="framer-moza4w" data-framer-name="Title" data-framer-component-type="RichTextContainer"
+                        style="--extracted-1w1cjl5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-1w1cjl5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="demo1-title">电脑接管</h6>
+                      </div>
+                      <div class="framer-uexrt6" data-framer-name="Description" data-framer-component-type="RichTextContainer"
+                        style="--extracted-r6o4lv: var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-r6o4lv, var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)));" data-i18n="demo1-desc">任务：看一下知乎热搜</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="framer-z4nszo-container" style="opacity: 1;">
+                  <div class="framer-fRJGb framer-X39Rs framer-gYzTM framer-s6gdki framer-v-s6gdki framer-vbne96"
+                    data-framer-name="Variant 1" style="width: 100%; border-radius: 16px; opacity: 1;">
+                    <div class="framer-xczo4n" style="border-radius: 16px; opacity: 1; overflow: hidden;">
+                      <div class="framer-1j2rfkl" style="opacity: 1; background: #000;">
+                        <div class="video-with-big-play video-with-big-play--sm" style="position: absolute; inset: 0; width: 100%; height: 100%;">
+                          <video style="width: 100%; height: 100%; object-fit: contain; display: block;"
+                            src="https://raw.githubusercontent.com/Simpleyyt/picgo-image/master/file.mp4"></video>
+                          <button type="button" class="video-big-play-btn" aria-label="播放/暂停" title="播放/暂停"></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="framer-1i3y03n" data-framer-name="Text Container" style="opacity: 1;">
+                      <div class="framer-moza4w" data-framer-name="Title" data-framer-component-type="RichTextContainer"
+                        style="--extracted-1w1cjl5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-1w1cjl5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="demo2-title">文件处理</h6>
+                      </div>
+                      <div class="framer-uexrt6" data-framer-name="Description" data-framer-component-type="RichTextContainer"
+                        style="--extracted-r6o4lv: var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-r6o4lv, var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)));" data-i18n="demo2-desc">任务：转成 jpg</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="framer-9xd062" style="opacity: 1;">
+                <div class="framer-zlfh4k-container" style="opacity: 1;">
+                  <div class="framer-fRJGb framer-X39Rs framer-gYzTM framer-s6gdki framer-v-s6gdki framer-vbne96"
+                    data-framer-name="Variant 1" style="width: 100%; border-radius: 16px; opacity: 1;">
+                    <div class="framer-xczo4n" style="border-radius: 16px; opacity: 1; overflow: hidden;">
+                      <div class="framer-1j2rfkl" style="opacity: 1; background: #000;">
+                        <div class="video-with-big-play video-with-big-play--sm" style="position: absolute; inset: 0; width: 100%; height: 100%;">
+                          <video style="width: 100%; height: 100%; object-fit: contain; display: block;"
+                            src="https://raw.githubusercontent.com/Simpleyyt/picgo-image/master/mcp.mp4"></video>
+                          <button type="button" class="video-big-play-btn" aria-label="播放/暂停" title="播放/暂停"></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="framer-1i3y03n" data-framer-name="Text Container" style="opacity: 1;">
+                      <div class="framer-moza4w" data-framer-name="Title" data-framer-component-type="RichTextContainer"
+                        style="--extracted-1w1cjl5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-1w1cjl5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="demo3-title">MCP 工具调用</h6>
+                      </div>
+                      <div class="framer-uexrt6" data-framer-name="Description" data-framer-component-type="RichTextContainer"
+                        style="--extracted-r6o4lv: var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-r6o4lv, var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)));" data-i18n="demo3-desc">任务：统计一下 simpleyyt 用户的 github 仓库</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="framer-e3esgv-container" style="opacity: 1;">
+                  <div class="framer-fRJGb framer-X39Rs framer-gYzTM framer-s6gdki framer-v-s6gdki framer-vbne96"
+                    data-framer-name="Variant 1" style="width: 100%; border-radius: 16px; opacity: 1;">
+                    <div class="framer-xczo4n" style="border-radius: 16px; opacity: 1; overflow: hidden;">
+                      <div class="framer-1j2rfkl" style="opacity: 1; background: rgba(55, 53, 47, 0.04); display: flex; align-items: center; justify-content: center;">
+                      </div>
+                    </div>
+                    <div class="framer-1i3y03n" data-framer-name="Text Container" style="opacity: 1;">
+                      <div class="framer-moza4w" data-framer-name="Title" data-framer-component-type="RichTextContainer"
+                        style="--extracted-1w1cjl5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-1w1cjl5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="demo4-title">更多演示即将上线</h6>
+                      </div>
+                      <div class="framer-uexrt6" data-framer-name="Description" data-framer-component-type="RichTextContainer"
+                        style="--extracted-r6o4lv: var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                        <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                          style="--framer-text-alignment: left; --framer-text-color: var(--extracted-r6o4lv, var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129)));" data-i18n="demo4-desc">敬请期待更多功能场景演示</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="framer-fmql81" data-framer-name="Section">
+          <div class="framer-ks46ti" data-framer-name="Frame 1597883363">
+            <div class="framer-1e8zjtt-container">
+              <div class="framer-KQYTp framer-pGyeG framer-gYzTM framer-1v6im3d framer-v-1v6im3d"
+                data-framer-name="Variant 1" style="width: 100%; opacity: 1;">
+                <div class="framer-1n30kki" data-framer-name="Main Heading"
+                  data-framer-component-type="RichTextContainer"
+                  style="--extracted-1of0zx5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <h2 class="framer-text framer-styles-preset-fv1517" data-styles-preset="v5E1UZeye"
+                    style="--framer-text-alignment: center; --framer-text-color: var(--extracted-1of0zx5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="how-title">工作原理</h2>
+                </div>
+                <div class="framer-uoq2r2"
+                  data-framer-name="Turn any email into action. Your fastest path from inbox to getting work done."
+                  data-framer-component-type="RichTextContainer"
+                  style="--extracted-r6o4lv: var(--token-cdbb0e1f-c1ce-4975-a9ed-d5050ee7ee5b, rgb(94, 94, 91)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                  <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                    style="--framer-text-alignment: center; --framer-text-color: var(--extracted-r6o4lv, var(--token-cdbb0e1f-c1ce-4975-a9ed-d5050ee7ee5b, rgb(94, 94, 91)));" data-i18n="how-subtitle">只需一句话，Agent 自动规划、执行、调用工具，将您的想法变成现实</p>
+                </div>
+              </div>
+            </div>
+            <div class="framer-177c0jr" data-framer-name="Frame 1597884506">
+              <div class="framer-npnla6" data-framer-name="Frame 1597884507">
+                <div class="framer-1lt8k79" data-framer-name="Step 1" data-framer-component-type="RichTextContainer"
+                  style="transform: none;">
+                  <p class="framer-text framer-styles-preset-fro201" data-styles-preset="pqSA57L3c"
+                    style="--framer-text-alignment: left; --framer-text-color: var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129));" data-i18n="step1-label">步骤 1</p>
+                </div>
+                <div class="framer-rgk2vx" data-framer-name="Frame 1597885106">
+                  <div class="framer-hlm2x5" data-framer-name="Task breakdown"
+                    data-framer-component-type="RichTextContainer" style="transform: none;">
+                    <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                      style="--framer-text-alignment: left; --framer-text-color: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45));" data-i18n="step1-title">任务分解</h6>
+                  </div>
+                  <div class="framer-u9b4f2"
+                    data-framer-name="PlanAct Agent analyzes user request and breaks it into executable steps"
+                    data-framer-component-type="RichTextContainer" style="transform: none;">
+                      <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                        style="--framer-text-alignment: left; --framer-text-color: var(--token-cdbb0e1f-c1ce-4975-a9ed-d5050ee7ee5b, rgb(94, 94, 91));" data-i18n="step1-desc">PlanAct Agent 分析用户请求，制定计划并拆分为可执行的步骤</p>
+                  </div>
+                </div>
+              </div>
+              <div class="framer-e4c33w" data-framer-name="Frame 1597884510">
+                <div class="framer-gcv2cl" data-framer-name="Step 2" data-framer-component-type="RichTextContainer"
+                  style="transform: none;">
+                  <p class="framer-text framer-styles-preset-fro201" data-styles-preset="pqSA57L3c"
+                    style="--framer-text-alignment: left; --framer-text-color: var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129));" data-i18n="step2-label">步骤 2</p>
+                </div>
+                <div class="framer-1sycsss" data-framer-name="Frame 1597885110">
+                  <div class="framer-8qz9qv" data-framer-name="Parallel execution"
+                    data-framer-component-type="RichTextContainer" style="transform: none;">
+                    <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                      style="--framer-text-alignment: left; --framer-text-color: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45));" data-i18n="step2-title">Agent 执行</h6>
+                  </div>
+                  <div class="framer-1prht2m" data-framer-name="Frame 1597885107">
+                    <div class="framer-n8ihup"
+                      data-framer-name="Agent executes each step according to the plan"
+                      data-framer-component-type="RichTextContainer" style="transform: none;">
+                      <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                        style="--framer-text-alignment: left; --framer-text-color: var(--token-cdbb0e1f-c1ce-4975-a9ed-d5050ee7ee5b, rgb(94, 94, 91));" data-i18n="step2-desc">Agent 按照计划逐步执行，自主完成各阶段任务</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="framer-1h07k4b" data-framer-name="Frame 1597884509">
+                <div class="framer-19nmwza" data-framer-name="Step 3" data-framer-component-type="RichTextContainer"
+                  style="transform: none;">
+                  <p class="framer-text framer-styles-preset-fro201" data-styles-preset="pqSA57L3c"
+                    style="--framer-text-alignment: left; --framer-text-color: var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129));" data-i18n="step3-label">步骤 3</p>
+                </div>
+                <div class="framer-1oiqv03" data-framer-name="Frame 1597885108">
+                  <div class="framer-e8gjsi" data-framer-name="Autonomous processing"
+                    data-framer-component-type="RichTextContainer" style="transform: none;">
+                    <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                      style="--framer-text-alignment: left; --framer-text-color: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45));" data-i18n="step3-title">工具调用</h6>
+                  </div>
+                  <div class="framer-ldmiei" data-framer-name="Agent uses browser, shell, file tools to complete tasks"
+                    data-framer-component-type="RichTextContainer" style="transform: none;">
+                    <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                      style="--framer-text-alignment: left; --framer-text-color: var(--token-cdbb0e1f-c1ce-4975-a9ed-d5050ee7ee5b, rgb(94, 94, 91));" data-i18n="step3-desc">Agent 调用浏览器、Shell、文件等工具完成研究、分析与创作</p>
+                  </div>
+                </div>
+              </div>
+              <div class="framer-1j7idkv" data-framer-name="Frame 1597884511">
+                <div class="framer-84bmkg" data-framer-name="Step 4" data-framer-component-type="RichTextContainer"
+                  style="transform: none;">
+                  <p class="framer-text framer-styles-preset-fro201" data-styles-preset="pqSA57L3c"
+                    style="--framer-text-alignment: left; --framer-text-color: var(--token-91ee6838-d32d-40b7-a1e9-383a8aadfaa8, rgb(133, 132, 129));" data-i18n="step4-label">步骤 4</p>
+                </div>
+                <div class="framer-g9gnk5" data-framer-name="Frame 1597885109">
+                  <div class="framer-1y5e6si" data-framer-name="Bringing It All Together"
+                    data-framer-component-type="RichTextContainer" style="transform: none;">
+                    <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                      style="--framer-text-alignment: left; --framer-text-color: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45));" data-i18n="step4-title">结果汇总</h6>
+                  </div>
+                  <div class="framer-ee5mo4"
+                    data-framer-name="Agent synthesizes results and returns final answer via SSE"
+                    data-framer-component-type="RichTextContainer" style="transform: none;">
+                    <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                      style="--framer-text-alignment: left; --framer-text-color: var(--token-cdbb0e1f-c1ce-4975-a9ed-d5050ee7ee5b, rgb(94, 94, 91));" data-i18n="step4-desc">Agent 整合执行结果，通过 SSE 实时回传，完成最终答复</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="framer-1draf48" data-framer-name="Section">
+          <div class="framer-hy88l0" data-framer-name="Frame 1597883363">
+            <div class="framer-o3dxx3-container">
+              <div class="framer-KQYTp framer-pGyeG framer-gYzTM framer-1v6im3d framer-v-1v6im3d"
+                data-framer-name="Variant 1" style="width: 100%; opacity: 1;">
+                <div class="framer-1n30kki" data-framer-name="Main Heading"
+                  data-framer-component-type="RichTextContainer"
+                  style="--extracted-1of0zx5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                  <h2 class="framer-text framer-styles-preset-fv1517" data-styles-preset="v5E1UZeye"
+                    style="--framer-text-alignment: center; --framer-text-color: var(--extracted-1of0zx5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="prompts-title">示例提示</h2>
+                </div>
+                <div class="framer-uoq2r2"
+                  data-framer-name="Turn any email into action. Your fastest path from inbox to getting work done."
+                  data-framer-component-type="RichTextContainer"
+                  style="--extracted-r6o4lv: var(--token-cdbb0e1f-c1ce-4975-a9ed-d5050ee7ee5b, rgb(94, 94, 91)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                  <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                    style="--framer-text-alignment: center; --framer-text-color: var(--extracted-r6o4lv, var(--token-cdbb0e1f-c1ce-4975-a9ed-d5050ee7ee5b, rgb(94, 94, 91)));" data-i18n="prompts-subtitle">在 AI Manus Demo 中尝试这些场景</p>
+                </div>
+              </div>
+            </div>
+            <div class="framer-kkurga" data-framer-name="Frame 1597884506">
+              <div class="framer-8u3dlj-container">
+                <div class="framer-XhfDh framer-X39Rs framer-cmMDS framer-1fmwo6q framer-v-1fmwo6q"
+                  data-framer-name="Variant 1" data-highlight="true" tabindex="0"
+                  style="background-color: rgb(255, 255, 255); width: 100%; border-radius: 16px; opacity: 1;">
+                  <div class="framer-s98e5c" data-framer-component-type="RichTextContainer"
+                    style="--extracted-1w1cjl5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                      style="--framer-text-color: var(--extracted-1w1cjl5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="prompt1">看一下知乎热搜，给我总结一下</h6>
+                  </div>
+                  <button type="button" class="ai-manus-copy-btn" aria-label="复制提示"
+                    data-prompt="看一下知乎热搜，给我总结一下"
+                    style="flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 100px; border: 1px solid rgba(0,0,0,0.1); background: rgba(55,53,47,0.05); cursor: pointer; font-size: 13px; font-weight: 500; color: rgb(94,94,91); white-space: nowrap;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    <span class="copy-label" data-i18n="copy">复制</span>
+                  </button>
+                </div>
+              </div>
+              <div class="framer-15ars2p-container">
+                <div class="framer-XhfDh framer-X39Rs framer-cmMDS framer-1fmwo6q framer-v-1fmwo6q"
+                  data-framer-name="Variant 1" data-highlight="true" tabindex="0"
+                  style="background-color: rgb(255, 255, 255); width: 100%; border-radius: 16px; opacity: 1;">
+                  <div class="framer-s98e5c" data-framer-component-type="RichTextContainer"
+                    style="--extracted-1w1cjl5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                      style="--framer-text-color: var(--extracted-1w1cjl5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="prompt2">把这个文件夹里的所有图片转成 jpg 格式</h6>
+                  </div>
+                  <button type="button" class="ai-manus-copy-btn" aria-label="复制提示"
+                    data-prompt="把这个文件夹里的所有图片转成 jpg 格式"
+                    style="flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 100px; border: 1px solid rgba(0,0,0,0.1); background: rgba(55,53,47,0.05); cursor: pointer; font-size: 13px; font-weight: 500; color: rgb(94,94,91); white-space: nowrap;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    <span class="copy-label" data-i18n="copy">复制</span>
+                  </button>
+                </div>
+              </div>
+              <div class="framer-1xm2uad-container">
+                <div class="framer-XhfDh framer-X39Rs framer-cmMDS framer-1fmwo6q framer-v-1fmwo6q"
+                  data-framer-name="Variant 1" data-highlight="true" tabindex="0"
+                  style="background-color: rgb(255, 255, 255); width: 100%; border-radius: 16px; opacity: 1;">
+                  <div class="framer-s98e5c" data-framer-component-type="RichTextContainer"
+                    style="--extracted-1w1cjl5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                      style="--framer-text-color: var(--extracted-1w1cjl5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="prompt3">统计一下 simpleyyt 用户的 github 仓库，整理成表格</h6>
+                  </div>
+                  <button type="button" class="ai-manus-copy-btn" aria-label="复制提示"
+                    data-prompt="统计一下 simpleyyt 用户的 github 仓库，整理成表格"
+                    style="flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 100px; border: 1px solid rgba(0,0,0,0.1); background: rgba(55,53,47,0.05); cursor: pointer; font-size: 13px; font-weight: 500; color: rgb(94,94,91); white-space: nowrap;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    <span class="copy-label" data-i18n="copy">复制</span>
+                  </button>
+                </div>
+              </div>
+              <div class="framer-qz1xm-container">
+                <div class="framer-XhfDh framer-X39Rs framer-cmMDS framer-1fmwo6q framer-v-1fmwo6q"
+                  data-framer-name="Variant 1" data-highlight="true" tabindex="0"
+                  style="background-color: rgb(255, 255, 255); width: 100%; border-radius: 16px; opacity: 1;">
+                  <div class="framer-s98e5c" data-framer-component-type="RichTextContainer"
+                    style="--extracted-1w1cjl5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <h6 class="framer-text framer-styles-preset-1cc08nj" data-styles-preset="mqB1sXfO1"
+                      style="--framer-text-color: var(--extracted-1w1cjl5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="prompt4">帮我搜索最近一周 AI Agent 相关的新闻，写一份摘要报告</h6>
+                  </div>
+                  <button type="button" class="ai-manus-copy-btn" aria-label="复制提示"
+                    data-prompt="帮我搜索最近一周 AI Agent 相关的新闻，写一份摘要报告"
+                    style="flex: none; display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 100px; border: 1px solid rgba(0,0,0,0.1); background: rgba(55,53,47,0.05); cursor: pointer; font-size: 13px; font-weight: 500; color: rgb(94,94,91); white-space: nowrap;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    <span class="copy-label" data-i18n="copy">复制</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="framer-1clc3bj-container">
+          <div class="framer-QwlJm framer-zs7rnu framer-v-zs7rnu" data-framer-name="Variant 1"
+            style="width: 100%; opacity: 1;">
+            <div class="framer-bs5wrk" data-framer-name="Main Content" style="opacity: 1;">
+              <div class="framer-fixsbz-container" style="opacity: 1;">
+                <div class="framer-KQYTp framer-pGyeG framer-gYzTM framer-1v6im3d framer-v-1v6im3d"
+                  data-framer-name="Variant 1" style="width: 100%; opacity: 1;">
+                  <div class="framer-1n30kki" data-framer-name="Main Heading"
+                    data-framer-component-type="RichTextContainer"
+                    style="--extracted-1of0zx5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <h2 class="framer-text framer-styles-preset-fv1517" data-styles-preset="v5E1UZeye"
+                      style="--framer-text-alignment: center; --framer-text-color: var(--extracted-1of0zx5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="faq-title">常见问题</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="framer-vl5m14-container" style="opacity: 1;">
+                <div class="framer-VoKDA framer-18tznzd framer-v-18tznzd" data-framer-name="Default"
+                  style="width: 100%; opacity: 1;">
+                  <div class="framer-1kgvmx2-container" style="opacity: 1;">
+                    <div class="framer-KI5mI framer-iU3eG framer-Am10j framer-wd4Dk framer-141o7en framer-v-1euc14i ai-manus-faq-item"
+                      data-border="true" data-framer-name="Closed"
+                      style="--border-bottom-width: 1px; --border-color: rgba(0, 0, 0, 0.08); --border-left-width: 0px; --border-right-width: 0px; --border-style: solid; --border-top-width: 0px; width: 100%; opacity: 1;">
+                      <div class="framer-17xvt09 ai-manus-faq-trigger" data-framer-name="Top" data-highlight="true" tabindex="0"
+                        style="opacity: 1;">
+                        <div class="framer-rezjre" data-framer-component-type="RichTextContainer"
+                          style="justify-content: center; --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                          <p class="framer-text framer-styles-preset-1vzlovf" data-styles-preset="JdfJ8JwjN" data-i18n="faq1-q">部署 AI Manus 需要哪些基础条件？</p>
+                        </div>
+                        <div class="framer-1gy7xnt" style="opacity: 1;">
+                          <div class="framer-1wz4nnz" style="background-color: rgb(153, 153, 153); border-radius: 1px; opacity: 1;"></div>
+                          <div class="framer-wif2sg ai-manus-faq-plus" style="background-color: rgb(153, 153, 153); border-radius: 10px; opacity: 1;"></div>
+                        </div>
+                      </div>
+                      <div class="framer-d6jy2s ai-manus-faq-answer" style="display: none; padding: 4px 0 12px;">
+                        <div class="framer-gdpuxd" data-framer-component-type="RichTextContainer"
+                          style="--framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                          <p class="framer-text framer-styles-preset-1hyz5t5" data-styles-preset="JdfJ8JwjN" style="--framer-text-color: rgb(133, 132, 129);" data-i18n="faq1-a">最小只需一个 LLM 服务即可完成部署，不需要依赖任何其他外部服务。内置 Terminal、Browser、File、Web Search 等工具，开箱即用，非常适合个人或团队快速上手。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="framer-1ld1ifp-container" style="opacity: 1;">
+                    <div class="framer-KI5mI framer-iU3eG framer-Am10j framer-wd4Dk framer-141o7en framer-v-1euc14i ai-manus-faq-item"
+                      data-border="true" data-framer-name="Closed"
+                      style="--border-bottom-width: 1px; --border-color: rgba(0, 0, 0, 0.08); --border-left-width: 0px; --border-right-width: 0px; --border-style: solid; --border-top-width: 0px; width: 100%; opacity: 1;">
+                      <div class="framer-17xvt09 ai-manus-faq-trigger" data-framer-name="Top" data-highlight="true" tabindex="0"
+                        style="opacity: 1;">
+                        <div class="framer-rezjre" data-framer-component-type="RichTextContainer"
+                          style="justify-content: center; --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                          <p class="framer-text framer-styles-preset-1vzlovf" data-styles-preset="JdfJ8JwjN" data-i18n="faq2-q">沙盒隔离是如何工作的？</p>
+                        </div>
+                        <div class="framer-1gy7xnt" style="opacity: 1;">
+                          <div class="framer-1wz4nnz" style="background-color: rgb(153, 153, 153); border-radius: 1px; opacity: 1;"></div>
+                          <div class="framer-wif2sg ai-manus-faq-plus" style="background-color: rgb(153, 153, 153); border-radius: 10px; opacity: 1;"></div>
+                        </div>
+                      </div>
+                      <div class="framer-d6jy2s ai-manus-faq-answer" style="display: none; padding: 4px 0 12px;">
+                        <div class="framer-gdpuxd" data-framer-component-type="RichTextContainer"
+                          style="--framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                          <p class="framer-text framer-styles-preset-1hyz5t5" data-styles-preset="JdfJ8JwjN" style="--framer-text-color: rgb(133, 132, 129);" data-i18n="faq2-a">每个 Task 都会分配一个独立的沙盒，运行在本地 Docker 环境中，相互之间完全隔离，确保任务安全、稳定地执行，不会相互干扰。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="framer-cyovc0-container" style="opacity: 1;">
+                    <div class="framer-KI5mI framer-iU3eG framer-Am10j framer-wd4Dk framer-141o7en framer-v-1euc14i ai-manus-faq-item"
+                      data-border="true" data-framer-name="Closed"
+                      style="--border-bottom-width: 1px; --border-color: rgba(0, 0, 0, 0.08); --border-left-width: 0px; --border-right-width: 0px; --border-style: solid; --border-top-width: 0px; width: 100%; opacity: 1;">
+                      <div class="framer-17xvt09 ai-manus-faq-trigger" data-framer-name="Top" data-highlight="true" tabindex="0"
+                        style="opacity: 1;">
+                        <div class="framer-rezjre" data-framer-component-type="RichTextContainer"
+                          style="justify-content: center; --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                          <p class="framer-text framer-styles-preset-1vzlovf" data-styles-preset="JdfJ8JwjN" data-i18n="faq3-q">支持哪些工具？可以实时查看吗？</p>
+                        </div>
+                        <div class="framer-1gy7xnt" style="opacity: 1;">
+                          <div class="framer-1wz4nnz" style="background-color: rgb(153, 153, 153); border-radius: 1px; opacity: 1;"></div>
+                          <div class="framer-wif2sg ai-manus-faq-plus" style="background-color: rgb(153, 153, 153); border-radius: 10px; opacity: 1;"></div>
+                        </div>
+                      </div>
+                      <div class="framer-d6jy2s ai-manus-faq-answer" style="display: none; padding: 4px 0 12px;">
+                        <div class="framer-gdpuxd" data-framer-component-type="RichTextContainer"
+                          style="--framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                          <p class="framer-text framer-styles-preset-1hyz5t5" data-styles-preset="JdfJ8JwjN" style="--framer-text-color: rgb(133, 132, 129);" data-i18n="faq3-a">支持 Terminal、Browser、File、Web Search 和消息工具。所有工具均支持实时查看——你可以随时观察 Agent 的执行过程，并在需要时接管操作。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="framer-osy1o5-container" style="opacity: 1;">
+                    <div class="framer-KI5mI framer-iU3eG framer-Am10j framer-wd4Dk framer-141o7en framer-v-1euc14i ai-manus-faq-item"
+                      data-border="true" data-framer-name="Closed"
+                      style="--border-bottom-width: 1px; --border-color: rgba(0, 0, 0, 0.08); --border-left-width: 0px; --border-right-width: 0px; --border-style: solid; --border-top-width: 0px; width: 100%; opacity: 1;">
+                      <div class="framer-17xvt09 ai-manus-faq-trigger" data-framer-name="Top" data-highlight="true" tabindex="0"
+                        style="opacity: 1;">
+                        <div class="framer-rezjre" data-framer-component-type="RichTextContainer"
+                          style="justify-content: center; --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                          <p class="framer-text framer-styles-preset-1vzlovf" data-styles-preset="JdfJ8JwjN" data-i18n="faq4-q">任务执行过程中可以中断吗？</p>
+                        </div>
+                        <div class="framer-1gy7xnt" style="opacity: 1;">
+                          <div class="framer-1wz4nnz" style="background-color: rgb(153, 153, 153); border-radius: 1px; opacity: 1;"></div>
+                          <div class="framer-wif2sg ai-manus-faq-plus" style="background-color: rgb(153, 153, 153); border-radius: 10px; opacity: 1;"></div>
+                        </div>
+                      </div>
+                      <div class="framer-d6jy2s ai-manus-faq-answer" style="display: none; padding: 4px 0 12px;">
+                        <div class="framer-gdpuxd" data-framer-component-type="RichTextContainer"
+                          style="--framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                          <p class="framer-text framer-styles-preset-1hyz5t5" data-styles-preset="JdfJ8JwjN" style="--framer-text-color: rgb(133, 132, 129);" data-i18n="faq4-a">支持随时停止与打断，也支持文件上传与下载。任务会话通过 MongoDB/Redis 管理，支持后台长任务，即使关闭页面任务仍会继续运行。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="framer-ul0kj5-container" style="opacity: 1;">
+                    <div class="framer-KI5mI framer-iU3eG framer-Am10j framer-wd4Dk framer-141o7en framer-v-1euc14i ai-manus-faq-item"
+                      data-border="true" data-framer-name="Closed"
+                      style="--border-bottom-width: 1px; --border-color: rgba(0, 0, 0, 0.08); --border-left-width: 0px; --border-right-width: 0px; --border-style: solid; --border-top-width: 0px; width: 100%; opacity: 1;">
+                      <div class="framer-17xvt09 ai-manus-faq-trigger" data-framer-name="Top" data-highlight="true" tabindex="0"
+                        style="opacity: 1;">
+                        <div class="framer-rezjre" data-framer-component-type="RichTextContainer"
+                          style="justify-content: center; --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                          <p class="framer-text framer-styles-preset-1vzlovf" data-styles-preset="JdfJ8JwjN" data-i18n="faq5-q">AI Manus 支持私有化部署吗？</p>
+                        </div>
+                        <div class="framer-1gy7xnt" style="opacity: 1;">
+                          <div class="framer-1wz4nnz" style="background-color: rgb(153, 153, 153); border-radius: 1px; opacity: 1;"></div>
+                          <div class="framer-wif2sg ai-manus-faq-plus" style="background-color: rgb(153, 153, 153); border-radius: 10px; opacity: 1;"></div>
+                        </div>
+                      </div>
+                      <div class="framer-d6jy2s ai-manus-faq-answer" style="display: none; padding: 4px 0 12px;">
+                        <div class="framer-gdpuxd" data-framer-component-type="RichTextContainer"
+                          style="--framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                          <p class="framer-text framer-styles-preset-1hyz5t5" data-styles-preset="JdfJ8JwjN" style="--framer-text-color: rgb(133, 132, 129);" data-i18n="faq5-a">完全支持。AI Manus 是开源项目，可完全私有化部署在自己的服务器上。每个服务与工具都包含 Built-in 版本，数据不会流出，满足企业级安全与合规要求。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="framer-1ve0z0s-container">
+          <div class="framer-O1StT framer-epftnq framer-v-epftnq" data-framer-name="Desktop"
+            style="width: 100%; opacity: 1;">
+            <div class="framer-14804i" data-framer-name="Container" style="opacity: 1;">
+              <div class="framer-9b7d6h-container" style="opacity: 1;">
+                <div class="framer-KQYTp framer-pGyeG framer-gYzTM framer-1v6im3d framer-v-1v6im3d"
+                  data-framer-name="Variant 1" style="width: 100%; opacity: 1;">
+                  <div class="framer-1n30kki" data-framer-name="Main Heading"
+                    data-framer-component-type="RichTextContainer"
+                    style="--extracted-1of0zx5: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <h2 class="framer-text framer-styles-preset-fv1517" data-styles-preset="v5E1UZeye"
+                      style="--framer-text-alignment: center; --framer-text-color: var(--extracted-1of0zx5, var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)));" data-i18n="cta-title">想自部署 AI Manus？</h2>
+                  </div>
+                  <div class="framer-uoq2r2"
+                    data-framer-name="Turn any email into action. Your fastest path from inbox to getting work done."
+                    data-framer-component-type="RichTextContainer"
+                    style="--extracted-r6o4lv: var(--token-cdbb0e1f-c1ce-4975-a9ed-d5050ee7ee5b, rgb(94, 94, 91)); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <p class="framer-text framer-styles-preset-p1zsoc" data-styles-preset="R0Q_rbW7T"
+                      style="--framer-text-alignment: center; --framer-text-color: var(--extracted-r6o4lv, var(--token-cdbb0e1f-c1ce-4975-a9ed-d5050ee7ee5b, rgb(94, 94, 91)));" data-i18n="cta-desc">开源可自部署，最小只需一个 LLM。立即体验 Demo 或前往 GitHub 参与贡献。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="framer-4ofolz-container" style="opacity: 1;"><a
+                  class="framer-S5bdX framer-cmMDS framer-iy8tgj framer-v-iy8tgj framer-hbjxa3"
+                  data-framer-name="Primary" href="https://github.com/Simpleyyt/ai-manus" target="_blank" rel="noopener"
+                  style="background-color: var(--token-34fce946-1ec8-4fa1-acde-b4d26ae5b925, rgb(52, 50, 45)); height: 100%; border-radius: 999px; opacity: 1;">
+                  <div class="framer-yfl2gi" data-framer-name="label" data-framer-component-type="RichTextContainer"
+                    style="--extracted-r6o4lv: rgb(255, 255, 255); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                    <p class="framer-text framer-styles-preset-hw2ngh" data-styles-preset="gO0yWW2T4" dir="auto"
+                      style="--framer-text-color: var(--extracted-r6o4lv, rgb(255, 255, 255));" data-i18n="cta-github">前往 GitHub</p>
+                  </div>
+                </a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="overlay"></div>
+      <div class="framer-659p7w"></div>
+      <div class="framer-7bihl3-container">
+        <footer class="framer-zR4qY framer-cmMDS framer-NM5f4 framer-SJwLt framer-1mwnj5j framer-v-1mwnj5j"
+          data-framer-name="Web" style="background-color: rgb(26, 26, 25); width: 100%; opacity: 1;">
+          <div class="framer-1gtuy9v" data-framer-name="Frame 1597883866" style="opacity: 1;">
+            <div class="framer-1k2pjv0" data-framer-name="Frame 1597881634" style="opacity: 1;">
+              <div class="framer-piv297" data-framer-name="Frame 1597883138" style="opacity: 1;">
+                <div class="framer-12f9cpl" data-framer-name="Frame 1597882833" style="opacity: 1;">
+                  <div class="framer-1t3qmkb" data-framer-name="Monica-Logo-可替换文字" style="opacity: 1;">
+                    <div class="framer-1cglow6" data-framer-name="Manus-Logo-WithName" style="opacity: 1;">
+                      <div class="framer-hycwas" data-framer-name="Frame 628617" style="opacity: 1;">
+                        <div data-framer-component-type="SVG" data-framer-name="Vector" class="framer-8i6ar1"
+                          aria-hidden="true"
+                          style="image-rendering: pixelated; flex-shrink: 0; fill: rgb(0, 0, 0); color: rgb(0, 0, 0); opacity: 1;">
+                          <div class="svgContainer" style="width: 100%; height: 100%; aspect-ratio: inherit;"><svg
+                              style="width:100%;height:100%;" viewBox="0 0 20 26" preserveAspectRatio="none"
+                              width="100%" height="100%">
+                              <use href="#svg1940328640_5605"></use>
+                            </svg></div>
+                        </div>
+                      </div>
+                      <div data-framer-component-type="SVG" data-framer-name="Vector" class="framer-z1sejh"
+                        aria-hidden="true"
+                        style="image-rendering: pixelated; flex-shrink: 0; background-size: 100% 100%; background-image: url(&quot;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 viewBox=%220 0 70 14%22&gt;&lt;path d=%22M 62.228 12.101 L 61.631 12.101 L 61.631 8.598 L 62.44 8.598 C 62.658 9.522 62.972 10.196 63.383 10.619 C 63.793 11.042 64.326 11.254 64.981 11.254 C 65.455 11.254 65.821 11.158 66.078 10.966 C 66.347 10.76 66.482 10.484 66.482 10.138 C 66.482 9.778 66.322 9.432 66.001 9.098 C 65.68 8.752 65.16 8.386 64.442 8.001 C 63.466 7.475 62.767 6.955 62.343 6.442 C 61.92 5.916 61.708 5.325 61.708 4.671 C 61.708 4.247 61.785 3.856 61.939 3.497 C 62.106 3.124 62.324 2.804 62.594 2.534 C 62.876 2.265 63.21 2.059 63.595 1.918 C 63.98 1.764 64.397 1.687 64.846 1.687 C 65.244 1.687 65.635 1.745 66.02 1.86 C 66.418 1.976 66.764 2.136 67.06 2.342 L 67.406 1.88 L 67.907 1.88 L 67.907 4.786 L 67.156 4.786 C 66.861 4.055 66.553 3.529 66.232 3.208 C 65.924 2.887 65.545 2.727 65.096 2.727 C 64.737 2.727 64.448 2.823 64.23 3.015 C 64.024 3.208 63.922 3.464 63.922 3.785 C 63.922 4.145 64.076 4.485 64.384 4.806 C 64.705 5.126 65.231 5.479 65.962 5.864 C 66.476 6.147 66.918 6.423 67.291 6.692 C 67.663 6.962 67.964 7.237 68.195 7.52 C 68.426 7.789 68.593 8.078 68.696 8.386 C 68.811 8.681 68.869 9.002 68.869 9.349 C 68.869 9.798 68.786 10.202 68.619 10.561 C 68.452 10.921 68.215 11.229 67.907 11.485 C 67.599 11.742 67.226 11.941 66.79 12.082 C 66.367 12.223 65.892 12.294 65.366 12.294 C 64.814 12.294 64.3 12.223 63.826 12.082 C 63.351 11.928 62.959 11.71 62.651 11.427 Z M 56.087 5.056 C 56.087 4.542 56.074 4.138 56.049 3.843 C 56.023 3.535 55.953 3.304 55.837 3.15 C 55.722 2.983 55.548 2.874 55.317 2.823 C 55.099 2.759 54.798 2.707 54.413 2.669 L 54.413 1.899 L 58.763 1.899 L 58.763 7.732 C 58.763 8.514 58.769 9.13 58.782 9.58 C 58.808 10.016 58.846 10.343 58.898 10.561 C 58.936 10.728 58.981 10.863 59.033 10.966 C 59.084 11.055 59.167 11.132 59.283 11.197 C 59.398 11.248 59.552 11.286 59.745 11.312 C 59.95 11.325 60.213 11.331 60.534 11.331 L 60.534 12.082 L 56.703 12.313 L 56.492 10.6 L 56.415 10.6 C 56.081 11.139 55.612 11.556 55.009 11.851 C 54.406 12.146 53.732 12.294 52.988 12.294 C 51.615 12.294 50.569 11.806 49.85 10.831 C 49.298 10.086 49.023 9.028 49.023 7.655 L 49.023 5.056 C 49.023 4.53 49.01 4.119 48.984 3.824 C 48.958 3.516 48.888 3.285 48.772 3.131 C 48.67 2.977 48.509 2.874 48.291 2.823 C 48.073 2.759 47.771 2.707 47.386 2.669 L 47.386 1.899 L 51.698 1.899 L 51.698 7.347 C 51.698 8.643 51.859 9.586 52.18 10.176 C 52.5 10.754 53.014 11.043 53.72 11.043 C 54.477 11.043 55.061 10.696 55.471 10.003 C 55.882 9.336 56.087 8.354 56.087 7.058 Z M 38.29 8.964 C 38.29 9.49 38.302 9.907 38.328 10.215 C 38.367 10.51 38.437 10.741 38.54 10.908 C 38.655 11.062 38.822 11.164 39.04 11.216 C 39.271 11.267 39.579 11.306 39.964 11.331 L 39.964 12.101 L 33.901 12.101 L 33.901 11.331 C 34.273 11.306 34.568 11.267 34.786 11.216 C 35.017 11.164 35.19 11.062 35.306 10.908 C 35.434 10.754 35.518 10.536 35.556 10.253 C 35.595 9.971 35.614 9.586 35.614 9.098 L 35.614 6.692 C 35.614 5.935 35.601 5.325 35.575 4.863 C 35.55 4.388 35.518 4.068 35.479 3.901 C 35.441 3.734 35.389 3.599 35.325 3.497 C 35.261 3.381 35.165 3.298 35.036 3.246 C 34.908 3.182 34.748 3.144 34.555 3.131 C 34.363 3.105 34.119 3.092 33.824 3.092 L 33.824 2.438 L 37.539 1.706 L 37.789 3.4 L 37.866 3.4 C 38.29 2.861 38.79 2.444 39.368 2.149 C 39.945 1.854 40.58 1.706 41.273 1.706 C 42.095 1.706 42.756 1.822 43.256 2.053 C 43.769 2.271 44.225 2.643 44.623 3.169 C 44.841 3.464 45.034 3.849 45.2 4.324 C 45.367 4.786 45.451 5.428 45.451 6.249 L 45.451 8.964 C 45.451 9.49 45.463 9.907 45.489 10.215 C 45.528 10.51 45.598 10.741 45.701 10.908 C 45.816 11.062 45.983 11.164 46.201 11.216 C 46.42 11.267 46.715 11.306 47.087 11.331 L 47.087 12.101 L 41.062 12.101 L 41.062 11.331 C 41.447 11.318 41.748 11.286 41.966 11.235 C 42.197 11.171 42.371 11.062 42.486 10.908 C 42.602 10.754 42.679 10.536 42.717 10.253 C 42.756 9.958 42.775 9.573 42.775 9.098 L 42.775 6.48 C 42.775 5.826 42.736 5.274 42.659 4.825 C 42.582 4.376 42.454 4.016 42.274 3.747 C 42.108 3.464 41.883 3.266 41.601 3.15 C 41.318 3.022 40.965 2.958 40.542 2.958 C 40.131 2.958 39.778 3.073 39.483 3.304 C 39.188 3.535 38.931 3.856 38.713 4.267 C 38.598 4.498 38.495 4.799 38.405 5.171 C 38.328 5.531 38.29 5.909 38.29 6.307 Z M 29.103 6.615 C 28.025 7.103 27.21 7.558 26.658 7.982 C 26.119 8.392 25.85 8.822 25.85 9.272 C 25.85 9.644 25.952 9.939 26.158 10.157 C 26.363 10.375 26.62 10.484 26.928 10.484 C 27.236 10.484 27.525 10.433 27.794 10.33 C 28.064 10.215 28.295 10.067 28.487 9.888 C 28.68 9.708 28.827 9.496 28.93 9.252 C 29.045 8.996 29.103 8.726 29.103 8.444 Z M 29.103 5.595 L 29.103 4.786 C 29.103 4.042 28.968 3.503 28.699 3.169 C 28.442 2.823 28.038 2.65 27.486 2.65 C 27.114 2.65 26.832 2.752 26.639 2.958 C 26.447 3.15 26.267 3.477 26.1 3.939 C 25.985 4.26 25.818 4.51 25.6 4.69 C 25.394 4.87 25.105 4.96 24.733 4.96 C 24.374 4.96 24.098 4.85 23.906 4.632 C 23.713 4.414 23.617 4.106 23.617 3.708 C 23.617 3.092 23.95 2.605 24.618 2.245 C 25.298 1.886 26.318 1.706 27.679 1.706 C 29.116 1.706 30.143 1.969 30.759 2.496 C 31.375 3.009 31.683 3.875 31.683 5.094 L 31.683 9.31 C 31.683 10.401 31.901 10.946 32.337 10.946 C 32.581 10.946 32.805 10.863 33.011 10.696 L 33.3 11.254 C 33.12 11.575 32.838 11.832 32.453 12.024 C 32.08 12.204 31.657 12.294 31.182 12.294 C 30.592 12.294 30.143 12.114 29.835 11.755 C 29.527 11.395 29.373 10.889 29.373 10.234 L 29.276 10.234 C 28.904 10.901 28.423 11.408 27.833 11.755 C 27.242 12.101 26.568 12.274 25.811 12.274 C 25.003 12.274 24.355 12.05 23.867 11.601 C 23.379 11.139 23.136 10.542 23.136 9.811 C 23.136 9.246 23.386 8.72 23.886 8.232 C 24.387 7.732 25.221 7.244 26.389 6.769 Z M 6.341 8.925 C 6.341 9.464 6.354 9.888 6.38 10.196 C 6.405 10.504 6.476 10.741 6.591 10.908 C 6.707 11.062 6.874 11.164 7.092 11.216 C 7.31 11.267 7.612 11.306 7.997 11.331 L 7.997 12.101 L 1.914 12.101 L 1.914 11.331 C 2.299 11.306 2.607 11.267 2.838 11.216 C 3.069 11.164 3.242 11.062 3.357 10.908 C 3.473 10.754 3.55 10.536 3.588 10.253 C 3.627 9.958 3.646 9.567 3.646 9.079 L 3.646 6.692 C 3.646 5.961 3.633 5.351 3.608 4.863 C 3.595 4.376 3.563 4.042 3.511 3.862 C 3.473 3.695 3.421 3.567 3.357 3.477 C 3.306 3.375 3.216 3.298 3.088 3.246 C 2.972 3.182 2.818 3.144 2.626 3.131 C 2.433 3.105 2.183 3.092 1.875 3.092 L 1.875 2.438 L 5.59 1.706 L 5.821 3.381 L 5.937 3.381 C 6.476 2.778 7.015 2.348 7.554 2.091 C 8.106 1.835 8.741 1.706 9.46 1.706 C 10.307 1.706 11.006 1.854 11.558 2.149 C 12.11 2.444 12.527 2.868 12.809 3.42 L 12.886 3.42 C 13.348 2.881 13.9 2.463 14.542 2.168 C 15.183 1.86 15.87 1.706 16.601 1.706 C 17.371 1.706 18.039 1.803 18.603 1.995 C 19.181 2.188 19.63 2.463 19.951 2.823 C 20.207 3.118 20.394 3.503 20.509 3.978 C 20.637 4.453 20.702 5.114 20.702 5.961 L 20.702 8.925 C 20.702 9.451 20.714 9.868 20.74 10.176 C 20.779 10.484 20.856 10.722 20.971 10.889 C 21.087 11.055 21.253 11.164 21.472 11.216 C 21.69 11.267 21.991 11.306 22.376 11.331 L 22.376 12.101 L 16.293 12.101 L 16.293 11.331 C 16.678 11.318 16.98 11.286 17.198 11.235 C 17.429 11.171 17.602 11.062 17.718 10.908 C 17.846 10.741 17.923 10.516 17.949 10.234 C 17.987 9.952 18.007 9.567 18.007 9.079 L 18.007 6.557 C 18.007 5.89 17.968 5.325 17.891 4.863 C 17.814 4.401 17.692 4.029 17.525 3.747 C 17.358 3.464 17.134 3.266 16.852 3.15 C 16.582 3.022 16.248 2.958 15.851 2.958 C 15.401 2.958 15.029 3.067 14.734 3.285 C 14.452 3.503 14.214 3.785 14.022 4.132 C 13.688 4.735 13.521 5.486 13.521 6.384 L 13.521 8.925 C 13.521 9.451 13.534 9.868 13.56 10.176 C 13.585 10.484 13.656 10.722 13.772 10.889 C 13.887 11.055 14.054 11.164 14.272 11.216 C 14.503 11.267 14.817 11.306 15.215 11.331 L 15.215 12.101 L 9.113 12.101 L 9.113 11.331 C 9.498 11.306 9.8 11.267 10.018 11.216 C 10.249 11.164 10.422 11.062 10.538 10.908 C 10.666 10.754 10.743 10.536 10.769 10.253 C 10.807 9.958 10.826 9.567 10.826 9.079 L 10.826 6.557 C 10.826 5.89 10.788 5.325 10.711 4.863 C 10.634 4.401 10.505 4.029 10.326 3.747 C 10.159 3.464 9.934 3.266 9.652 3.15 C 9.37 3.022 9.017 2.958 8.593 2.958 C 8.17 2.958 7.817 3.06 7.535 3.266 C 7.265 3.471 7.04 3.747 6.861 4.093 C 6.694 4.401 6.566 4.754 6.476 5.152 C 6.386 5.55 6.341 5.961 6.341 6.384 Z%22 fill=%22rgb(255,255,255)%22&gt;&lt;/path&gt;&lt;/svg&gt;&quot;); opacity: 1;">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="framer-1irllat" data-framer-name="© 2025 Manus AI. Singapore."
+                data-framer-component-type="RichTextContainer"
+                style="--extracted-r6o4lv: rgba(255, 255, 255, 0.6); --framer-paragraph-spacing: 0px; transform: none; opacity: 1;">
+                <p class="framer-text framer-styles-preset-fro201" data-styles-preset="pqSA57L3c"
+                  style="--framer-text-alignment: center; --framer-text-color: var(--extracted-r6o4lv, rgba(255, 255, 255, 0.6));" data-i18n="footer-copyright">© AI Manus 开源项目 · GitHub: Simpleyyt/ai-manus</p>
+              </div>
+              <div class="framer-odjwjh" style="opacity: 1;"><a data-framer-component-type="SVG"
+                  data-framer-name="Frame 1597882408" href="https://www.linkedin.com/company/manus-im/" target="_blank"
+                  rel="noopener" class="framer-pfjv56 framer-ztzu7q" aria-hidden="true"
+                  style="image-rendering: pixelated; flex-shrink: 0; fill: rgb(0, 0, 0); color: rgb(0, 0, 0); opacity: 1;">
+                  <div class="svgContainer" style="width: 100%; height: 100%; aspect-ratio: inherit;"><svg
+                      style="width:100%;height:100%;" viewBox="0 0 28 28" preserveAspectRatio="none" width="100%"
+                      height="100%">
+                      <use href="#svg609185540_1308"></use>
+                    </svg></div>
+                </a><a data-framer-component-type="SVG" data-framer-name="Frame 1597882414" href="https://x.com/manusai"
+                  target="_blank" rel="noopener" class="framer-krflgh framer-ztzu7q" aria-hidden="true"
+                  style="image-rendering: pixelated; flex-shrink: 0; fill: rgb(0, 0, 0); color: rgb(0, 0, 0); opacity: 1;">
+                  <div class="svgContainer" style="width: 100%; height: 100%; aspect-ratio: inherit;"><svg
+                      style="width:100%;height:100%;" viewBox="0 0 28 28" preserveAspectRatio="none" width="100%"
+                      height="100%">
+                      <use href="#svg1045513352_535"></use>
+                    </svg></div>
+                </a><a data-framer-component-type="SVG" data-framer-name="Frame 1597882411"
+                  href="https://github.com/Simpleyyt/ai-manus" target="_blank" rel="noopener"
+                  class="framer-7y2y4e framer-ztzu7q" aria-hidden="true"
+                  style="image-rendering: pixelated; flex-shrink: 0; fill: rgb(0, 0, 0); color: rgb(0, 0, 0); opacity: 1;">
+                  <div class="svgContainer" style="width: 100%; height: 100%; aspect-ratio: inherit;"><svg
+                      style="width:100%;height:100%;" viewBox="0 0 28 28" preserveAspectRatio="none" width="100%"
+                      height="100%">
+                      <use href="#svg-887447754_3222"></use>
+                    </svg></div>
+                </a><a data-framer-component-type="SVG" data-framer-name="Frame 1597882410"
+                  href="https://www.instagram.com/manusaiofficial" target="_blank" rel="noopener"
+                  class="framer-2jyooa framer-ztzu7q" aria-hidden="true"
+                  style="image-rendering: pixelated; flex-shrink: 0; fill: rgb(0, 0, 0); color: rgb(0, 0, 0); opacity: 1;">
+                  <div class="svgContainer" style="width: 100%; height: 100%; aspect-ratio: inherit;"><svg
+                      style="width:100%;height:100%;" viewBox="0 0 28 28" preserveAspectRatio="none" width="100%"
+                      height="100%">
+                      <use href="#svg2006594885_3128"></use>
+                    </svg></div>
+                </a><a data-framer-component-type="SVG" data-framer-name="Frame 1597882412"
+                  href="http://www.tiktok.com/@manusaiofficial" target="_blank" rel="noopener"
+                  class="framer-1p61ebq framer-ztzu7q" aria-hidden="true"
+                  style="image-rendering: pixelated; flex-shrink: 0; fill: rgb(0, 0, 0); color: rgb(0, 0, 0); opacity: 1;">
+                  <div class="svgContainer" style="width: 100%; height: 100%; aspect-ratio: inherit;"><svg
+                      style="width:100%;height:100%;" viewBox="0 0 28 28" preserveAspectRatio="none" width="100%"
+                      height="100%">
+                      <use href="#svg-1345456751_856"></use>
+                    </svg></div>
+                </a></div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      document.querySelectorAll('.video-with-big-play').forEach(function (wrap) {
+        var video = wrap.querySelector('video');
+        var btn = wrap.querySelector('.video-big-play-btn');
+        if (!video || !btn) return;
+        function updatePlaying() {
+          var isPlaying = !video.paused;
+          wrap.classList.toggle('playing', isPlaying);
+          video.controls = isPlaying;
+        }
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          if (video.paused) video.play(); else video.pause();
+          updatePlaying();
+        });
+        video.addEventListener('play', updatePlaying);
+        video.addEventListener('pause', updatePlaying);
+        video.addEventListener('ended', updatePlaying);
+        updatePlaying();
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var translations = {
+        zh: {
+          'try-demo': '体验 Demo',
+          'hero-title': 'AI Manus：通用的 AI Agent 系统，在沙盒中运行各种工具。',
+          'hero-desc': '支持 Terminal、Browser、File、Web Search，支持 MCP 集成。用 AI Manus 开启你的智能体之旅。',
+          'features-title': 'AI Manus 的优点',
+          'features-subtitle': '最小只需一个 LLM 即可部署，功能完整，开箱即用',
+          'feat1-title': '极简部署',
+          'feat1-desc': '最小只需一个 LLM 服务即可完成部署，无需依赖任何其他外部服务。',
+          'feat2-title': '丰富工具集',
+          'feat2-desc': '支持 Terminal、Browser、File、Web Search 及消息工具，并支持实时查看和接管。',
+          'feat3-title': '沙盒隔离',
+          'feat3-desc': '每个 Task 分配独立沙盒，在本地 Docker 环境中安全运行，互不干扰。',
+          'feat4-title': '任务会话',
+          'feat4-desc': '通过 MongoDB/Redis 管理会话历史，支持后台长任务持续运行。',
+          'feat5-title': '灵活对话',
+          'feat5-desc': '支持随时停止与打断，支持文件上传与下载，交互体验流畅自然。',
+          'feat6-title': '多语言支持',
+          'feat6-desc': '界面同时支持中文与英文，满足不同语言用户的使用需求。',
+          'feat7-title': '用户认证',
+          'feat7-desc': '内置用户登录与认证机制，保障系统访问安全。',
+          'demo-title': '功能展示',
+          'demo-subtitle': '真实场景演示，看看 AI Manus 如何完成任务',
+          'demo1-title': '电脑接管',
+          'demo1-desc': '任务：看一下知乎热搜',
+          'demo2-title': '文件处理',
+          'demo2-desc': '任务：转成 jpg',
+          'demo3-title': 'MCP 工具调用',
+          'demo3-desc': '任务：统计一下 simpleyyt 用户的 github 仓库',
+          'demo4-title': '更多演示即将上线',
+          'demo4-desc': '敬请期待更多功能场景演示',
+          'how-title': '工作原理',
+          'how-subtitle': '只需一句话，Agent 自动规划、执行、调用工具，将您的想法变成现实',
+          'step1-label': '步骤 1',
+          'step1-title': '任务分解',
+          'step1-desc': 'PlanAct Agent 分析用户请求，制定计划并拆分为可执行的步骤',
+          'step2-label': '步骤 2',
+          'step2-title': 'Agent 执行',
+          'step2-desc': 'Agent 按照计划逐步执行，自主完成各阶段任务',
+          'step3-label': '步骤 3',
+          'step3-title': '工具调用',
+          'step3-desc': 'Agent 调用浏览器、Shell、文件等工具完成研究、分析与创作',
+          'step4-label': '步骤 4',
+          'step4-title': '结果汇总',
+          'step4-desc': 'Agent 整合执行结果，通过 SSE 实时回传，完成最终答复',
+          'prompts-title': '示例提示',
+          'prompts-subtitle': '在 AI Manus Demo 中尝试这些场景',
+          'prompt1': '看一下知乎热搜，给我总结一下',
+          'prompt2': '把这个文件夹里的所有图片转成 jpg 格式',
+          'prompt3': '统计一下 simpleyyt 用户的 github 仓库，整理成表格',
+          'prompt4': '帮我搜索最近一周 AI Agent 相关的新闻，写一份摘要报告',
+          'copy': '复制',
+          'copied': '已复制！',
+          'faq-title': '常见问题',
+          'faq1-q': '部署 AI Manus 需要哪些基础条件？',
+          'faq1-a': '最小只需一个 LLM 服务即可完成部署，不需要依赖任何其他外部服务。内置 Terminal、Browser、File、Web Search 等工具，开箱即用，非常适合个人或团队快速上手。',
+          'faq2-q': '沙盒隔离是如何工作的？',
+          'faq2-a': '每个 Task 都会分配一个独立的沙盒，运行在本地 Docker 环境中，相互之间完全隔离，确保任务安全、稳定地执行，不会相互干扰。',
+          'faq3-q': '支持哪些工具？可以实时查看吗？',
+          'faq3-a': '支持 Terminal、Browser、File、Web Search 和消息工具。所有工具均支持实时查看——你可以随时观察 Agent 的执行过程，并在需要时接管操作。',
+          'faq4-q': '任务执行过程中可以中断吗？',
+          'faq4-a': '支持随时停止与打断，也支持文件上传与下载。任务会话通过 MongoDB/Redis 管理，支持后台长任务，即使关闭页面任务仍会继续运行。',
+          'faq5-q': 'AI Manus 支持私有化部署吗？',
+          'faq5-a': '完全支持。AI Manus 是开源项目，可完全私有化部署在自己的服务器上。每个服务与工具都包含 Built-in 版本，数据不会流出，满足企业级安全与合规要求。',
+          'cta-title': '想自部署 AI Manus？',
+          'cta-desc': '开源可自部署，最小只需一个 LLM。立即体验 Demo 或前往 GitHub 参与贡献。',
+          'cta-github': '前往 GitHub',
+          'footer-copyright': '© AI Manus 开源项目 · GitHub: Simpleyyt/ai-manus',
+          'video-unsupported': '您的浏览器不支持视频播放。',
+          'play-pause': '播放/暂停',
+          'lang-label': '简体中文',
+          'page-title': 'AI Manus | 通用的 AI Agent 系统',
+          'nav-home': '首页',
+          'nav-docs': '文档'
+        },
+        en: {
+          'try-demo': 'Try Demo',
+          'hero-title': 'AI Manus: Universal AI Agent System, Running Tools in Sandbox.',
+          'hero-desc': 'Supports Terminal, Browser, File, Web Search with MCP integration. Start your AI agent journey with AI Manus.',
+          'features-title': 'Why AI Manus',
+          'features-subtitle': 'Deploy with just one LLM, full-featured and ready to use out of the box',
+          'feat1-title': 'Minimal Setup',
+          'feat1-desc': 'Deploy with just one LLM service, no other external dependencies required.',
+          'feat2-title': 'Rich Toolset',
+          'feat2-desc': 'Supports Terminal, Browser, File, Web Search and messaging tools with real-time monitoring and takeover.',
+          'feat3-title': 'Sandbox Isolation',
+          'feat3-desc': 'Each task runs in an isolated sandbox within a local Docker environment, fully independent and secure.',
+          'feat4-title': 'Task Sessions',
+          'feat4-desc': 'Session history managed via MongoDB/Redis, supporting long-running background tasks.',
+          'feat5-title': 'Flexible Interaction',
+          'feat5-desc': 'Stop or interrupt tasks anytime, supports file upload and download for a smooth experience.',
+          'feat6-title': 'Multilingual',
+          'feat6-desc': 'Interface supports both Chinese and English to serve users of different languages.',
+          'feat7-title': 'User Auth',
+          'feat7-desc': 'Built-in user login and authentication to secure system access.',
+          'demo-title': 'Feature Showcase',
+          'demo-subtitle': 'Real-world demos showing how AI Manus completes tasks',
+          'demo1-title': 'Computer Takeover',
+          'demo1-desc': 'Task: Check Zhihu trending topics',
+          'demo2-title': 'File Processing',
+          'demo2-desc': 'Task: Convert to jpg',
+          'demo3-title': 'MCP Tool Call',
+          'demo3-desc': 'Task: Summarize GitHub repos of user simpleyyt',
+          'demo4-title': 'More Demos Coming Soon',
+          'demo4-desc': 'Stay tuned for more feature scenario demonstrations',
+          'how-title': 'How It Works',
+          'how-subtitle': 'One sentence is all it takes — Agent plans, executes, and calls tools to turn your ideas into reality',
+          'step1-label': 'Step 1',
+          'step1-title': 'Task Breakdown',
+          'step1-desc': 'PlanAct Agent analyzes the user request, creates a plan and breaks it into executable steps',
+          'step2-label': 'Step 2',
+          'step2-title': 'Agent Execution',
+          'step2-desc': 'Agent executes each step according to the plan, completing each phase autonomously',
+          'step3-label': 'Step 3',
+          'step3-title': 'Tool Invocation',
+          'step3-desc': 'Agent calls browser, Shell, file and other tools to complete research, analysis and creation',
+          'step4-label': 'Step 4',
+          'step4-title': 'Result Synthesis',
+          'step4-desc': 'Agent consolidates execution results and streams the final answer back via SSE',
+          'prompts-title': 'Example Prompts',
+          'prompts-subtitle': 'Try these scenarios in AI Manus Demo',
+          'prompt1': 'Check Zhihu trending topics and summarize for me',
+          'prompt2': 'Convert all images in this folder to jpg format',
+          'prompt3': 'List all GitHub repositories of user simpleyyt in a table',
+          'prompt4': 'Search for AI Agent news from the past week and write a summary report',
+          'copy': 'Copy',
+          'copied': 'Copied!',
+          'faq-title': 'FAQ',
+          'faq1-q': 'What are the prerequisites for deploying AI Manus?',
+          'faq1-a': 'Only one LLM service is required for deployment, no other external services needed. Built-in tools include Terminal, Browser, File, Web Search — ready to use out of the box, ideal for individuals or teams to get started quickly.',
+          'faq2-q': 'How does sandbox isolation work?',
+          'faq2-a': 'Each task is assigned an isolated sandbox running in a local Docker environment. Tasks are completely isolated from each other, ensuring safe and stable execution without interference.',
+          'faq3-q': 'What tools are supported? Can I monitor them in real time?',
+          'faq3-a': 'Supported tools include Terminal, Browser, File, Web Search and messaging. All tools support real-time monitoring — you can observe the agent\'s execution at any time and take over when needed.',
+          'faq4-q': 'Can tasks be interrupted during execution?',
+          'faq4-a': 'Tasks can be stopped or interrupted at any time, and file upload/download is also supported. Sessions are managed via MongoDB/Redis and support long-running background tasks — they continue even if you close the page.',
+          'faq5-q': 'Does AI Manus support private deployment?',
+          'faq5-a': 'Fully supported. AI Manus is an open-source project that can be privately deployed on your own servers. Each service and tool includes a built-in version, keeping your data in-house to meet enterprise security and compliance requirements.',
+          'cta-title': 'Want to Self-Deploy AI Manus?',
+          'cta-desc': 'Open-source and self-hostable, requires only one LLM. Try the Demo or contribute on GitHub.',
+          'cta-github': 'Go to GitHub',
+          'footer-copyright': '© AI Manus Open Source · GitHub: Simpleyyt/ai-manus',
+          'video-unsupported': 'Your browser does not support video playback.',
+          'play-pause': 'Play/Pause',
+          'lang-label': 'English',
+          'page-title': 'AI Manus | Universal AI Agent System',
+          'nav-home': 'Home',
+          'nav-docs': 'Docs'
+        }
+      };
+
+      var savedLang = localStorage.getItem('ai-manus-lang');
+      var browserLang = (navigator.language || navigator.userLanguage || 'zh').toLowerCase();
+      var defaultLang = browserLang.startsWith('zh') ? 'zh' : 'en';
+      var currentLang = savedLang || defaultLang;
+
+      function applyLang(lang) {
+        currentLang = lang;
+        localStorage.setItem('ai-manus-lang', lang);
+        var t = translations[lang];
+        document.getElementById('html-root').lang = lang === 'zh' ? 'zh-CN' : 'en';
+        document.title = t['page-title'];
+        var label = document.getElementById('lang-label');
+        if (label) label.textContent = t['lang-label'];
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+          var key = el.getAttribute('data-i18n');
+          if (t[key] !== undefined) el.textContent = t[key];
+        });
+        // highlight active option
+        document.querySelectorAll('.lang-option').forEach(function (opt) {
+          var isActive = opt.getAttribute('data-lang') === lang;
+          opt.style.fontWeight = isActive ? '700' : '500';
+          opt.style.color = isActive ? 'rgb(52,50,45)' : 'rgb(94,94,91)';
+        });
+      }
+
+      // Language picker toggle
+      var picker = document.getElementById('lang-picker');
+      var dropdown = document.getElementById('lang-dropdown');
+      if (picker && dropdown) {
+        picker.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var isOpen = dropdown.style.display !== 'none';
+          dropdown.style.display = isOpen ? 'none' : 'block';
+        });
+        document.addEventListener('click', function () {
+          if (dropdown) dropdown.style.display = 'none';
+        });
+        document.querySelectorAll('.lang-option').forEach(function (opt) {
+          opt.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var lang = opt.getAttribute('data-lang');
+            applyLang(lang);
+            dropdown.style.display = 'none';
+          });
+        });
+      }
+
+      applyLang(currentLang);
+    })();
+  </script>
+  <script>
+    document.querySelectorAll('.ai-manus-copy-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var prompt = btn.getAttribute('data-prompt');
+        navigator.clipboard.writeText(prompt).then(function() {
+          var label = btn.querySelector('.copy-label');
+          var lang = localStorage.getItem('ai-manus-lang') || 'zh';
+          var copiedText = lang === 'en' ? 'Copied!' : '已复制！';
+          var copyText = lang === 'en' ? 'Copy' : '复制';
+          label.textContent = copiedText;
+          btn.style.background = 'rgba(0,0,0,0.08)';
+          setTimeout(function() {
+            label.textContent = copyText;
+            btn.style.background = 'rgba(55,53,47,0.05)';
+          }, 2000);
+        });
+      });
+    });
+
+    document.querySelectorAll('.ai-manus-faq-answer').forEach(function(answer) {
+      answer.style.display = 'none';
+    });
+
+    document.querySelectorAll('.ai-manus-faq-trigger').forEach(function(trigger) {
+      trigger.addEventListener('click', function() {
+        var item = trigger.closest('.ai-manus-faq-item');
+        var answer = item.querySelector('.ai-manus-faq-answer');
+        var plus = item.querySelector('.ai-manus-faq-plus');
+        var isOpen = item.getAttribute('data-open') === 'true';
+        item.setAttribute('data-open', isOpen ? 'false' : 'true');
+        answer.style.display = isOpen ? 'none' : 'flex';
+        plus.style.transition = 'transform 0.2s';
+        plus.style.transform = isOpen ? '' : 'rotate(90deg)';
+      });
+    });
+  </script>
+</body>
+
+</html>
